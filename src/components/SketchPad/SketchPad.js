@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-const SketchPad = ({ handleSave }) => {
+const SketchPad = ({ round , handleSave }) => {
 
   const canvasRef = useRef(null)
   const contextRef = useRef(null)
@@ -46,7 +46,7 @@ const SketchPad = ({ handleSave }) => {
     e.preventDefault();
     const canvas = canvasRef.current;
     const dataURL = canvas.toDataURL();
-    handleSave(dataURL);
+    handleSave(round, dataURL);
   }
 
   return (

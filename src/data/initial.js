@@ -1,12 +1,10 @@
 const initial = {
-  dataURL: "",
+  gameID: 0,
   round: 0,
   players: [],
-  player1Name: "",
-  player2Name: "",
-  player3Name: "",
-  player4Name: "",
-  gameID: 0,
+  word: "",
+  guess: "",
+  dataURL: "",
 };
 
 export default initial;
