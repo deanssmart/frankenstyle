@@ -1,8 +1,8 @@
 import React from "react";
-import Form from "./components/Form/Form";
+import NameForm from "./components/NameForm/NameForm";
 
 const App = () => {
-  return <Form />;
+  return <NameForm />;
 };
 
 export default App;

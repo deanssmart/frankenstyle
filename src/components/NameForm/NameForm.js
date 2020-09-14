@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Button from "../Button/Button";
 
-class Form extends Component {
+class NameForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,7 +40,7 @@ class Form extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.handleSave({ ...this.state, playerName: [] });
+    this.props.handleSave();
   }
 
   //   componentDidMount() {
@@ -50,7 +50,7 @@ class Form extends Component {
   //   }
 
   render() {
-    const { playerName } = this.state;
+    const { playerName } = this.props;
 
     return (
       <>
@@ -100,4 +100,4 @@ class Form extends Component {
     );
   }
 }
-export default Form;
+export default NameForm;
