@@ -5,10 +5,7 @@ class NameForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      player1: this.props.player1,
-      player2: this.props.player2,
-      player3: this.props.player3,
-      player4: this.props.player4,
+      playerName: this.state.playerName,
     };
     this.handlePlayer1Name = this.handlePlayer1Name.bind(this);
     this.handlePlayer2Name = this.handlePlayer2Name.bind(this);
@@ -43,7 +40,7 @@ class NameForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.handleSave(this.props.players);
+    this.props.handleSave();
   }
 
   //   componentDidMount() {
@@ -53,7 +50,7 @@ class NameForm extends Component {
   //   }
 
   render() {
-    const { player1, player2, player3, player4 } = this.state;
+    const { playerName } = this.props;
 
     return (
       <>
@@ -61,8 +58,9 @@ class NameForm extends Component {
           <div className="form-group">
             <label for="player1">Player1</label>
             <input
+              className="form-control"
               onChange={this.handlePlayer1Name}
-              value={player1}
+              value={playerName}
               type="text"
               placeholder="Enter Player One's Name"
             />
@@ -71,7 +69,7 @@ class NameForm extends Component {
             <label for="player2">Player2</label>
             <input
               onChange={this.handlePlayer2Name}
-              value={player2}
+              value={playerName}
               type="text"
               placeholder="Enter Player Two's Name"
             />
@@ -80,7 +78,7 @@ class NameForm extends Component {
             <label for="player3">Player3</label>
             <input
               onChange={this.handlePlayer3Name}
-              value={player3}
+              value={playerName}
               type="text"
               placeholder="Enter Player Three's Name"
             />
@@ -89,7 +87,7 @@ class NameForm extends Component {
             <label for="player4">Player4</label>
             <input
               onChange={this.handlePlayer4Name}
-              value={player4}
+              value={playerName}
               type="text"
               placeholder="Enter Player Four's Name"
             />
@@ -103,3 +101,97 @@ class NameForm extends Component {
   }
 }
 export default NameForm;
+
+
+import React, { Component } from 'react';
+import Input from '../Inputs/Input';
+
+class StartForm extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = { 
+            player1Name: props.player1Name,
+            player2Name: props.player2Name,
+            winningScore: props.winningScore,
+            alternate: props.alternate,
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(e, input) {
+        let change = {}
+        change[input] = e.currentTarget.value;
+        this.setState(change);
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const { 
+            player1Name, 
+            player2Name, 
+            winningScore, 
+            alternate,
+        } = this.state;
+
+        if(player1Name !== "" && player2Name !== "") {        
+            this.props.handleSave(
+                player1Name, 
+                player2Name, 
+                winningScore, 
+                alternate,
+                );
+        }
+
+    };
+
+    render() {
+        const { 
+            player1Name, 
+            player2Name, 
+            winningScore, 
+            alternate, 
+        } = this.state;
+
+        return (
+            <form onSubmit={ this.handleSubmit } className="container">
+                <Input 
+                    label="Player 1 Name"
+                    name="player1Name"
+                    type="text"
+                    value={ player1Name }
+                    handleChange={ (e) => this.handleChange(e, "player1Name") }
+                    required
+                />
+                <Input 
+                    label="Player 2 Name"
+                    name="player2Name"
+                    type="text"
+                    value={ player2Name }
+                    handleChange={ (e) => this.handleChange(e, "player2Name") }
+                    required
+                />
+                <Input 
+                    label="Winning Score"
+                    name="winningScore"
+                    type="number"
+                    value={ winningScore }
+                    handleChange={ (e) => this.handleChange(e, "winningScore") }
+                />
+                <Input 
+                    label="Alternate Every"
+                    name="alternate"
+                    type="number"
+                    value={ alternate }
+                    handleChange={ (e) => this.handleChange(e, "alternate") }
+                />                                                
+
+                <button className="btn btn-primary">Submit</button>
+            </form>
+        );
+    }
+}
+
+export default StartForm;

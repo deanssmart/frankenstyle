@@ -42,8 +42,8 @@ const SketchPad = ({ handleSave }) => {
     contextRef.current.stroke()
   }
 
-  const handleSubmit = () => {
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const canvas = canvasRef.current;
     const dataURL = canvas.toDataURL();
     handleSave(dataURL);
@@ -60,7 +60,7 @@ const SketchPad = ({ handleSave }) => {
       />
       <button
         className="container btn btn-success"
-        onClick={handleSubmit}
+        onClick={(e) => handleSubmit(e)}
       >
         Save
         </button>
