@@ -1,10 +1,15 @@
 import { connect } from "react-redux";
 import NameForm from "./NameForm";
-import { Form } from "../../data/actions";
+import { postPlayers } from "../../data/actions/api";
 
-const mapStateToProps = ({ playerName }) => {
+const mapStateToProps = (state) => {
   return {
-    playerName: playerName,
+    players: state.players,
   };
-
-export default connect(mapStateToProps)(NameForm);
+};
+const mapDispatchToProps = ({ dispatch }) => {
+  return {
+    handleSave: (players) => dispatch(postPlayers(players)),
+  };
+};
+export default connect(mapDispatchToProps, mapStateToProps)(NameForm);

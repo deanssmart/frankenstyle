@@ -1,10 +1,11 @@
-import React from 'react';
-import SketchPad from './SketchPad';
-
+import React from "react";
+import SketchPad from "./SketchPad";
+import NameForm from "./NameForm";
 const App = () => (
-    <>
-     <SketchPad />
-    </>
+  <>
+    <NameForm />
+    <SketchPad />
+  </>
 );
 
 export default App;

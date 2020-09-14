@@ -4,8 +4,8 @@ import { save } from "../../data/actions";
 
 const mapDispatchToProps = ({ dispatch }) => {
   return {
-    handleSubmit: (value) => dispatch(save(value)),
+    handleSubmit: (value) => dispatch(handleSave(value)),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Button);
+export default connect(null, mapDispatchToProps)(Button);

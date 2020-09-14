@@ -5,7 +5,7 @@ class NameForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      playerName: this.state.playerName,
+      players: this.props.players,
     };
     this.handlePlayer1Name = this.handlePlayer1Name.bind(this);
     this.handlePlayer2Name = this.handlePlayer2Name.bind(this);
@@ -40,7 +40,7 @@ class NameForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.handleSave();
+    this.props.handleSave(this.props.players);
   }
 
   //   componentDidMount() {
@@ -50,7 +50,7 @@ class NameForm extends Component {
   //   }
 
   render() {
-    const { playerName } = this.props;
+    const { players } = this.state;
 
     return (
       <>
@@ -60,7 +60,7 @@ class NameForm extends Component {
             <input
               className="form-control"
               onChange={this.handlePlayer1Name}
-              value={playerName}
+              value={players}
               type="text"
               placeholder="Enter Player One's Name"
             />
@@ -69,7 +69,7 @@ class NameForm extends Component {
             <label for="player2">Player2</label>
             <input
               onChange={this.handlePlayer2Name}
-              value={playerName}
+              value={players}
               type="text"
               placeholder="Enter Player Two's Name"
             />
@@ -78,7 +78,7 @@ class NameForm extends Component {
             <label for="player3">Player3</label>
             <input
               onChange={this.handlePlayer3Name}
-              value={playerName}
+              value={players}
               type="text"
               placeholder="Enter Player Three's Name"
             />
@@ -87,7 +87,7 @@ class NameForm extends Component {
             <label for="player4">Player4</label>
             <input
               onChange={this.handlePlayer4Name}
-              value={playerName}
+              value={players}
               type="text"
               placeholder="Enter Player Four's Name"
             />

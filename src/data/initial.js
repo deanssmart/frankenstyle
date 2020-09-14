@@ -1,5 +1,6 @@
 const initial = {
-    dataURL: "",
-}
+  dataURL: "",
+  players: [],
+};
 
 export default initial;
