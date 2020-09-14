@@ -4,7 +4,10 @@ import { postPlayers } from "../../data/actions/api";
 
 const mapStateToProps = (state) => {
   return {
-    players: state.players,
+    player1: state.player1,
+    player2: state.player2,
+    player3: state.player3,
+    player4: state.player4,
   };
 };
 const mapDispatchToProps = ({ dispatch }) => {

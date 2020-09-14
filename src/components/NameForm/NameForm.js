@@ -5,7 +5,10 @@ class NameForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      players: this.props.players,
+      player1: this.props.player1,
+      player2: this.props.player2,
+      player3: this.props.player3,
+      player4: this.props.player4,
     };
     this.handlePlayer1Name = this.handlePlayer1Name.bind(this);
     this.handlePlayer2Name = this.handlePlayer2Name.bind(this);
@@ -50,7 +53,7 @@ class NameForm extends Component {
   //   }
 
   render() {
-    const { players } = this.state;
+    const { player1, player2, player3, player4 } = this.state;
 
     return (
       <>
@@ -58,9 +61,8 @@ class NameForm extends Component {
           <div className="form-group">
             <label for="player1">Player1</label>
             <input
-              className="form-control"
               onChange={this.handlePlayer1Name}
-              value={players}
+              value={player1}
               type="text"
               placeholder="Enter Player One's Name"
             />
@@ -69,7 +71,7 @@ class NameForm extends Component {
             <label for="player2">Player2</label>
             <input
               onChange={this.handlePlayer2Name}
-              value={players}
+              value={player2}
               type="text"
               placeholder="Enter Player Two's Name"
             />
@@ -78,7 +80,7 @@ class NameForm extends Component {
             <label for="player3">Player3</label>
             <input
               onChange={this.handlePlayer3Name}
-              value={players}
+              value={player3}
               type="text"
               placeholder="Enter Player Three's Name"
             />
@@ -87,7 +89,7 @@ class NameForm extends Component {
             <label for="player4">Player4</label>
             <input
               onChange={this.handlePlayer4Name}
-              value={players}
+              value={player4}
               type="text"
               placeholder="Enter Player Four's Name"
             />
