@@ -6,6 +6,10 @@ const mapStateToProps = ({ playerName }) => {
   return {
     playerName: playerName,
   };
-};
 
-export default connect(mapStateToProps)(Form);
+  const mapDispatchToProps = ({ dispatch }) => {
+  return { handleSubmit:(value) => dispatch(saveSettings(value) 
+}
+  }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Form);
