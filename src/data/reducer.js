@@ -1,3 +1,5 @@
+import initial from "./initial";
+
 const newGameReducer = (
   state,
   { gameID, word, player1Name, player2Name, player3Name, player4Name }
@@ -31,6 +33,10 @@ const makeGuessReducer = (state, { round, guess }) => {
   };
 };
 
+// const resetReducer = (state) => {
+//   return { initial };
+// };
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "NEW_GAME":
@@ -39,6 +45,8 @@ const reducer = (state, action) => {
       return saveSketchReducer(state, action);
     case "MAKE_GUESS":
       return makeGuessReducer(state, action);
+    case "RESET":
+      return initial;
     default:
       return state;
   }

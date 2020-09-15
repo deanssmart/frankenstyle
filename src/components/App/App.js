@@ -6,10 +6,7 @@ import EndScreen from "../EndScreen";
 
 const App = ({ round }) => (
   <>
-    { round === 0 ? <StartForm /> :
-  (round === 1 ? <SketchPad /> :
-    <GuessForm /> )
-
+    {round === 0 ? <StartForm /> : round === 1 ? <SketchPad /> : <GuessForm />}
     <EndScreen />
   </>
 );
