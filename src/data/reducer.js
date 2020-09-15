@@ -1,25 +1,44 @@
-const saveSketchReducer = (state, { dataURL }) => {
+const newGameReducer = (state, {
+  player1Name, 
+  player2Name,
+  player3Name,
+  player4Name, 
+}) => {
   return {
     ...state,
+    player1Name,
+    player2Name, 
+    player3Name, 
+    player4Name,
+    round: 1,
+  }
+}
+
+const saveSketchReducer = (state, { round, dataURL }) => {
+  return {
+    ...state,
+    round: round + 1,
     dataURL,
   };
 };
-const savePlayerReducer = (state, { players }) => {
+
+const makeGuessReducer = (state, { round, guess }) => {
   return {
     ...state,
-    players,
-  };
-};
+    round: round + 1,
+    guess,
+  }
+}
+
+
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "SAVE_SKETCH":
-      return saveSketchReducer(state, action);
-    case "SAVE_PLAYER":
-      return savePlayerReducer(state, action);
-    default:
-      return state;
-  }
+    case "NEW_GAME": return newGameReducer(state, action);
+    case "SAVE_SKETCH": return saveSketchReducer(state, action);
+    case "MAKE_GUESS": return makeGuessReducer(state, action);
+    default: return state;
+  };
 };
 
 export default reducer;

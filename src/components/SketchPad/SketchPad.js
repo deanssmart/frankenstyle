@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
+import Button from '../Button/Button';
 
-const SketchPad = ({ handleSave }) => {
+const SketchPad = ({ round, handleSave }) => {
 
   const canvasRef = useRef(null)
   const contextRef = useRef(null)
@@ -16,10 +17,10 @@ const SketchPad = ({ handleSave }) => {
     const context = canvas.getContext("2d")
     context.scale(2, 2)
     context.lineCap = "round"
-    context.strokeStyle = "black"
+    context.strokeStyle = `${round === 1 ? "blue" : "green"}`
     context.lineWidth = 5
     contextRef.current = context;
-  }, [])
+  }, [round])
 
   const startDrawing = ({ nativeEvent }) => {
     const { offsetX, offsetY } = nativeEvent;
@@ -42,11 +43,11 @@ const SketchPad = ({ handleSave }) => {
     contextRef.current.stroke()
   }
 
-  const handleSubmit = () => {
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const canvas = canvasRef.current;
     const dataURL = canvas.toDataURL();
-    handleSave(dataURL);
+    handleSave(round, dataURL);
   }
 
   return (
@@ -58,16 +59,11 @@ const SketchPad = ({ handleSave }) => {
         onMouseMove={draw}
         ref={canvasRef}
       />
-      <button
-        className="container btn btn-success"
-        onClick={handleSubmit}
-      >
-        Save
-        </button>
-      {/* <img 
-            className="container border border-primary"
-            src={ saved }
-        /> */}
+      <Button 
+        buttonClass="container btn btn-success"
+        handleClick={ (e) => handleSubmit(e) }
+        label="Submit"
+      />
     </>
   );
 };
