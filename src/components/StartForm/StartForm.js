@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from '../Input/Input';
+import Button from '../Button/Button';
 
 class StartForm extends Component {
     constructor(props) {
@@ -82,9 +83,11 @@ class StartForm extends Component {
                     value={ player4Name }
                     handleChange={ (e) => this.handleChange(e, "player4Name") }
                     required
-                />                                              
-
-                <button className="btn btn-primary">Submit</button>
+                />
+                <Button
+                    buttonClass="btn btn-primary"
+                    label="Start"
+                />
             </form>
         );
     }

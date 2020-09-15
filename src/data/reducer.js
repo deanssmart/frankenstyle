@@ -14,7 +14,10 @@ const newGameReducer = (state, {
 }) => {
   return {
     ...state,
-    players: [player1Name, player2Name, player3Name, player4Name],
+    player1Name,
+    player2Name, 
+    player3Name, 
+    player4Name,
     round: 1,
   }
 }

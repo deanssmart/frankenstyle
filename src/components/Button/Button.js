@@ -1,11 +1,16 @@
-import React from "react";
+import React from 'react';
 
-const Button = ({ children, handleSubmit }) => {
-  return (
-    <button onClick={handleSubmit} className="btn btn-primary">
-      {children}
-    </button>
-  );
-};
+const Button = ({
+    label,
+    buttonClass,
+    handleClick,
+}) => (
+        <button 
+            className={ buttonClass }
+            onClick={ handleClick }                      
+        >
+            { label }
+        </button>
+);
 
 export default Button;

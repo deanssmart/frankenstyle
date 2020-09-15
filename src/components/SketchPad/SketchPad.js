@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import Button from '../Button/Button';
 
 const SketchPad = ({ round , handleSave }) => {
 
@@ -58,16 +59,11 @@ const SketchPad = ({ round , handleSave }) => {
         onMouseMove={draw}
         ref={canvasRef}
       />
-      <button
-        className="container btn btn-success"
-        onClick={(e) => handleSubmit(e)}
-      >
-        Save
-        </button>
-      {/* <img 
-            className="container border border-primary"
-            src={ saved }
-        /> */}
+      <Button 
+        buttonClass="container btn btn-success"
+        handleClick={ (e) => handleSubmit(e) }
+        label="Submit"
+      />
     </>
   );
 };
