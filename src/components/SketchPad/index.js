@@ -4,8 +4,10 @@ import { postSketch } from '../../data/actions/api';
 
 const mapStateToProps = ({ round }) => ({ round });
 
-const mapDispatchToProps = (dispatch) => ({
-    handleSave: (round, dataURL) => dispatch(postSketch(round, dataURL)),
-});
+const mapDispatchToProps = dispatch => {
+    return {
+        handleSave: (round, dataURL) => dispatch(postSketch(round, dataURL)),
+    };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SketchPad);

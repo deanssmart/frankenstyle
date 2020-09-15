@@ -1,11 +1,15 @@
 const newGameReducer = (state, {
+  gameID,
+  word,
   player1Name, 
   player2Name,
   player3Name,
-  player4Name, 
+  player4Name,
 }) => {
   return {
     ...state,
+    gameID,
+    word,
     player1Name,
     player2Name, 
     player3Name, 
@@ -18,7 +22,7 @@ const saveSketchReducer = (state, { round, dataURL }) => {
   return {
     ...state,
     round: round + 1,
-    dataURL,
+    dataURL,   
   };
 };
 
