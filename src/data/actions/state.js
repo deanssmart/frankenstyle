@@ -14,7 +14,7 @@ export const newGame = ({
         }
     };
 
-export const saveSketch = ({
+export const saveRound = ({
     gameID,
     round,
     imageData,
@@ -23,23 +23,22 @@ export const saveSketch = ({
     return {
         gameID,
         round,
-        dataURL: imageData,
-        guess,
-        type: "SAVE_SKETCH"
+        roundInput: imageData || guess,
+        type: "SAVE_ROUND"
     };
 };
 
-export const saveGuess = ({
-    gameID,
-    round,
-    imageData,
-    guess,
-}) => {
-    return {
-        gameID,
-        round,
-        dataURL: imageData,
-        guess,
-        type: "MAKE_GUESS"
-    };
-};
+// export const saveGuess = ({
+//     gameID,
+//     round,
+//     imageData,
+//     guess,
+// }) => {
+//     return {
+//         gameID,
+//         round,
+//         dataURL: imageData,
+//         guess,
+//         type: "MAKE_GUESS"
+//     };
+// };

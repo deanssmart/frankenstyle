@@ -6,9 +6,9 @@ class GuessForm extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { 
+        this.state = {
+            roundInput: props.roundInput,
             round: props.round,
-            guess: props.guess,
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -22,30 +22,36 @@ class GuessForm extends Component {
    
     handleSubmit(e) {
         e.preventDefault();
-        const { round, guess } = this.state;
+        const { roundInput, round } = this.state;
 
-        if(guess !== "") {        
-            this.props.handleGuess(round, guess);
+        if(roundInput !== "") {        
+            this.props.handleGuess(round, roundInput);
         }
     };
 
     render() {
-        const { guess } = this.state;
+        const { roundInput, round } = this.state;
 
         return (
-            <form onSubmit={ this.handleSubmit } className="container">
-                <Input 
-                    name="guess"
-                    type="text"
-                    value={ guess }
-                    handleChange={ (e) => this.handleChange(e) }
-                    required
-                />                
-                <Button
-                    buttonClass="btn btn-primary"
-                    label="Guess"
+            <>
+                <img
+                    className="container" 
+                    src={ round === 2 ? roundInput[0] : roundInput[2] } 
                 />
-            </form>
+                <form onSubmit={ this.handleSubmit } className="container">
+                    <Input 
+                        name="guess"
+                        type="text"
+                        value={ round === 2 ? roundInput[1] : roundInput[3] }
+                        handleChange={ (e) => this.handleChange(e) }
+                        required
+                    />                
+                    <Button
+                        buttonClass="btn btn-primary"
+                        label="Guess"
+                    />
+                </form>
+            </>
         );
     }
 }

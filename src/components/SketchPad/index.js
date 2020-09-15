@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 import SketchPad from './SketchPad';
-import { postSketch } from '../../data/actions/api';
+import { postRound } from '../../data/actions/api';
 
 const mapStateToProps = ({ round }) => ({ round });
 
 const mapDispatchToProps = dispatch => {
     return {
-        handleSave: (round, dataURL) => dispatch(postSketch(round, dataURL)),
+        handleSave: (round, roundInput) => dispatch(postRound(round, roundInput)),
     };
 };
 

@@ -5,8 +5,7 @@ const initial = {
   player2Name: "", 
   player3Name: "", 
   player4Name: "",
-  word: "",
-  guess: "",
+  roundInput: [],
   dataURL: "",
 };
 

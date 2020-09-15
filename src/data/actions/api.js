@@ -1,10 +1,10 @@
 // import axios from '../../axios';
 import { newGame } from './state';
-import { saveSketch } from './state';
-import { saveGuess } from './state';
+import { saveRound } from './state';
+// import { saveGuess } from './state';
 import postNewGameData from '../json/postNewGame.json';
-import postSketchData from '../json/postSketchData.json';
-import postGuessData from '../json/postGuessData.json';
+import postRoundData from '../json/postRoundData.json';
+// import postGuessData from '../json/postGuessData.json';
 
 export const postNewGame = (
     player1Name, 
@@ -30,9 +30,9 @@ export const postNewGame = (
 //     };
 // };
 
-export const postSketch = (round, dataURL) => {
+export const postRound = (round, roundInput) => {
     return dispatch => {         
-       dispatch(saveSketch(postSketchData)); 
+       dispatch(saveRound(postRoundData)); 
     };
 };
 
@@ -47,11 +47,11 @@ export const postSketch = (round, dataURL) => {
 //     };
 // };
 
-export const postGuess = (round, dataURL) => {
-    return dispatch => {         
-       dispatch(saveGuess(postGuessData)); 
-    };
-};
+// export const postGuess = (round, dataURL) => {
+//     return dispatch => {         
+//        dispatch(saveGuess(postGuessData)); 
+//     };
+// };
 
 // export const postGuess = (round, dataURL) => {
 //     return (dispatch, getState) => {         
