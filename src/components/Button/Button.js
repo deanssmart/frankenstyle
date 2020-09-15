@@ -13,4 +13,8 @@ const Button = ({
         </button>
 );
 
+Button.defaultProps = {
+  onClick: null,
+};
+
 export default Button;

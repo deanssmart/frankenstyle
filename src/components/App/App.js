@@ -1,11 +1,14 @@
 import React from "react";
-import SketchPad from "../SketchPad";
 import StartForm from "../StartForm";
+import SketchPad from "../SketchPad";
+import GuessForm from "../GuessForm";
 
 const App = ({ round }) => (
   <>
   { round === 0 ? <StartForm /> :
-    <SketchPad />
+  (round === 1 ? <SketchPad /> :
+    <GuessForm /> )
+    
   }
   </>
 );

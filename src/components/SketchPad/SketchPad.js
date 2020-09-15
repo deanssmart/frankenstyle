@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Button from '../Button/Button';
 
-const SketchPad = ({ round , handleSave }) => {
+const SketchPad = ({ round, handleSave }) => {
 
   const canvasRef = useRef(null)
   const contextRef = useRef(null)
@@ -17,10 +17,10 @@ const SketchPad = ({ round , handleSave }) => {
     const context = canvas.getContext("2d")
     context.scale(2, 2)
     context.lineCap = "round"
-    context.strokeStyle = "black"
+    context.strokeStyle = `${round === 1 ? "blue" : "green"}`
     context.lineWidth = 5
     contextRef.current = context;
-  }, [])
+  }, [round])
 
   const startDrawing = ({ nativeEvent }) => {
     const { offsetX, offsetY } = nativeEvent;

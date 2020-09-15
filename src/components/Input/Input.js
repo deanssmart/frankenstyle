@@ -20,4 +20,8 @@ const Input = ({
         </div>
 );
 
+Input.defaultProps = {
+    label: null,
+};
+
 export default Input;
