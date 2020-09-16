@@ -7,8 +7,9 @@ class GuessForm extends Component {
         super(props);
 
         this.state = {
-            roundInput: props.roundInput,
+            roundInputs: props.roundInputs,
             round: props.round,
+            guess: props.guess,
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -22,28 +23,28 @@ class GuessForm extends Component {
    
     handleSubmit(e) {
         e.preventDefault();
-        const { roundInput, round } = this.state;
+        const { guess, round } = this.state;
 
-        if(roundInput !== "") {        
-            this.props.handleGuess(round, roundInput);
+        if(guess !== "") {        
+            this.props.handleGuess(round, guess);
         }
     };
 
     render() {
-        const { roundInput, round } = this.state;
+        const { roundInputs, round, guess } = this.state;
 
         return (
             <>
                 <img
                     className="container" 
-                    src={ round === 2 ? roundInput[0] : roundInput[2] } 
+                    src={ round === 2 ? roundInputs[0] : roundInputs[2] } 
                 />
                 <form onSubmit={ this.handleSubmit } className="container">
                     <Input 
                         name="guess"
                         type="text"
-                        value={ round === 2 ? roundInput[1] : roundInput[3] }
-                        handleChange={ (e) => this.handleChange(e) }
+                        value={ guess }
+                        handleChange={ this.handleChange }
                         required
                     />                
                     <Button

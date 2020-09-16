@@ -46,8 +46,8 @@ const SketchPad = ({ round, handleSave }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const canvas = canvasRef.current;
-    const roundInput = canvas.toDataURL();
-    handleSave(round, roundInput);
+    const imageData = canvas.toDataURL();
+    handleSave(round, imageData);
   }
 
   return (

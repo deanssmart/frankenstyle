@@ -18,11 +18,11 @@ const newGameReducer = (state, {
   }
 }
 
-const saveRoundReducer = (state, { round, roundInput }) => {
+const saveRoundReducer = (state, { round, roundInputs }) => {
   return {
     ...state,
     round: round + 1,
-    roundInput: [...state.roundInput, roundInput],   
+    roundInputs: [...state.roundInputs, roundInputs],   
   };
 };
 

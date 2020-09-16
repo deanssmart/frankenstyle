@@ -23,7 +23,7 @@ export const saveRound = ({
     return {
         gameID,
         round,
-        roundInput: imageData || guess,
+        roundInputs: imageData || guess,
         type: "SAVE_ROUND"
     };
 };

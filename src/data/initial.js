@@ -5,8 +5,9 @@ const initial = {
   player2Name: "", 
   player3Name: "", 
   player4Name: "",
-  roundInput: [],
-  dataURL: "",
+  roundInputs: [],
+  imageData: "",
+  guess: "",
 };
 
 export default initial;
