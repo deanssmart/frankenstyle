@@ -33,9 +33,9 @@ const makeGuessReducer = (state, { round, guess }) => {
   };
 };
 
-// const resetReducer = (state) => {
-//   return { initial };
-// };
+const resetReducer = (state) => {
+  return { ...initial };
+};
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -46,7 +46,7 @@ const reducer = (state, action) => {
     case "MAKE_GUESS":
       return makeGuessReducer(state, action);
     case "RESET":
-      return initial;
+      return resetReducer(state);
     default:
       return state;
   }
