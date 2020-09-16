@@ -1,4 +1,7 @@
 .container-global {
+  display: flex;
+  justify-content: center;
+  align-content: center;
   margin: 0;
   width: auto;
   height: 100%;
@@ -12,33 +15,51 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+  align-content: center;
 }
 
 .container-form {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   width: 100%;
 }
 
 .startform {
-  width: 46.25rem;
-  height: 26rem;
-  margin: 0 auto;
-  padding: 2em;
+  width: auto;
+  margin: 0;
   box-sizing: border-box;
   display: grid;
   grid-gap: 1.1rem;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 10em 10em 3em 5em;
+  grid-template-rows: 10em 10em 3em;
 }
 
 .button-startform {
   grid-column: 1 / span 2;
   margin-right: 25%;
   margin-left: 25%;
+}
+
+/* Game Start */
+
+.container-grid-gamestart {
+  width: auto;
+  margin: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 2.5rem;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 20em 3em 3em;
+  align-content: ;
+}
+
+.container-img {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  margin-left: 100px;
+  justify-content: center;
 }
 
 /* Sketchpad */

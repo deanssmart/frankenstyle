@@ -1,8 +1,13 @@
 .button {
-  border-radius: 0.5em;
+  border-radius: 2rem;
   outline: none;
   background-color: var(--secondary-colour);
   font-size: large;
   color: var(--highlights);
   border: var(--highlights) 2px;
+}
+
+.button-padding {
+  padding: 0.5rem;
+  width: 20rem;
 }

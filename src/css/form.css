@@ -1,8 +1,12 @@
 .form {
   font-family: var(--font-main);
-  position: relative;
+
   align-content: center;
   border: none;
   outline: none;
   text-decoration: none;
+}
+
+.form-group {
+  justify-self: center;
 }

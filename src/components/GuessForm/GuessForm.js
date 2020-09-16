@@ -47,7 +47,7 @@ class GuessForm extends Component {
             handleChange={this.handleChange}
             required
           />
-          <Button buttonClass="button" label="Guess" />
+          <Button buttonClass="button button-padding" label="Guess" />
         </form>
       </>
     );

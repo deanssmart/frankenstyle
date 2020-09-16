@@ -4,12 +4,13 @@ label {
 }
 
 label {
-  font-family: var(--font-main);
+  font-family: var(--font-title);
   color: var(--highlights);
+  padding-bottom: 0.3rem;
 }
 
 input {
-  font-size: 1.5rem;
+  font-size: 2rem;
   outline: none;
   border-radius: 0.2rem;
   text-decoration: none;
