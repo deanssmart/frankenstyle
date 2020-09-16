@@ -2,5 +2,5 @@
     "players": ["Dean", "Marta", "Oliver", "Jack"],
     "word": "Wombat",
     "id": 1,
-    "image": "data/images/wombat.jpg"
+    "image": "/assets/images/wombat.jpg"
 }
