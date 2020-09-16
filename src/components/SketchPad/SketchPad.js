@@ -43,6 +43,29 @@ const SketchPad = ({ round, handleSave }) => {
     contextRef.current.stroke()
   }
 
+  const touchStartDrawing = ({ nativeEvent }) => {    
+    const { clientX, clientY } = nativeEvent.touches[0];
+    const { offsetLeft, offsetTop } = canvasRef.current;
+    contextRef.current.beginPath()
+    contextRef.current.moveTo((clientX - offsetLeft), (clientY - offsetTop))
+    setIsDrawing(true)
+  }
+
+  const touchFinishDrawing = () => {
+    contextRef.current.closePath()
+    setIsDrawing(false)
+  }
+
+  const touchDraw = ({ nativeEvent }) => {
+    if (!isDrawing) {
+      return
+    }    
+    const { clientX, clientY } = nativeEvent.touches[0];
+    const { offsetLeft, offsetTop } = canvasRef.current;
+    contextRef.current.lineTo((clientX - offsetLeft), (clientY - offsetTop))
+    contextRef.current.stroke()
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const canvas = canvasRef.current;
@@ -57,9 +80,9 @@ const SketchPad = ({ round, handleSave }) => {
         onMouseDown={startDrawing}
         onMouseUp={finishDrawing}
         onMouseMove={draw}
-        onTouchStart={startDrawing}
-        onTouchEnd={finishDrawing}
-        onTouchMove ={draw}
+        onTouchStart={touchStartDrawing}
+        onTouchEnd={touchFinishDrawing}
+        onTouchMove ={touchDraw}
         ref={canvasRef}
       />
       <Button 
