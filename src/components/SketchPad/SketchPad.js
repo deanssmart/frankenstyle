@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import Button from "../Button/Button";
+import "../../App.css";
 
 const SketchPad = ({ round, handleSave }) => {
   const canvasRef = useRef(null);
@@ -69,6 +70,7 @@ const SketchPad = ({ round, handleSave }) => {
     e.preventDefault();
     const canvas = canvasRef.current;
 <<<<<<< HEAD
+<<<<<<< HEAD
     const imageData = canvas.toDataURL();
     console.log(imageData);
     handleSave(round, imageData);
@@ -92,6 +94,8 @@ const SketchPad = ({ round, handleSave }) => {
         label="Save"
       />
 =======
+=======
+>>>>>>> layout-css
     const dataURL = canvas.toDataURL();
     handleSave(round, dataURL);
   };
@@ -114,7 +118,6 @@ const SketchPad = ({ round, handleSave }) => {
           />
         </div>
       </div>
->>>>>>> layout
     </>
   );
 };

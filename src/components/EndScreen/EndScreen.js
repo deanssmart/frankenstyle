@@ -15,11 +15,7 @@ const EndScreen = ({ roundInputs, handleReset }) => {
           <h2>{roundInputs[3]}</h2>
         </div>
       </div>
-      <Button
-        label="New Game"
-        buttonClass="btn btn-success"
-        handleClick={handleReset}
-      />
+      <Button label="New Game" buttonClass="button" handleClick={handleReset} />
     </>
   );
 };
