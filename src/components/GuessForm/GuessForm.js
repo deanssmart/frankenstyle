@@ -25,36 +25,8 @@ class GuessForm extends Component {
     e.preventDefault();
     const { guess, round } = this.state;
 
-<<<<<<< HEAD
-    render() {
-        const { roundInputs, round, guess } = this.state;
-
-        return (
-            <>
-                <img
-                    alt="Player Drawing"
-                    className="container" 
-                    src={ round === 2 ? roundInputs[0] : roundInputs[2] } 
-                />
-                <form onSubmit={ this.handleSubmit } className="container">
-                    <Input 
-                        name="guess"
-                        type="text"
-                        value={ guess }
-                        handleChange={ this.handleChange }
-                        required
-                    />                
-                    <Button
-                        buttonClass="btn btn-primary"
-                        label="Guess"
-                    />
-                </form>
-            </>
-        );
-=======
     if (guess !== "") {
       this.props.handleGuess(round, guess);
->>>>>>> layout-css
     }
   }
 

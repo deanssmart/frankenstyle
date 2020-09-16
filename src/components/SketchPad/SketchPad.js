@@ -22,55 +22,51 @@ const SketchPad = ({ round, handleSave }) => {
     contextRef.current = context;
   }, [round]);
 
-  const startDrawing = ({ nativeEvent }) => {   
-    if (nativeEvent.type === "mousedown"){
+  const startDrawing = ({ nativeEvent }) => {
+    if (nativeEvent.type === "mousedown") {
       const { offsetX, offsetY } = nativeEvent;
       contextRef.current.beginPath();
       contextRef.current.moveTo(offsetX, offsetY);
       setIsDrawing(true);
-    } 
-    if (nativeEvent.type === "touchstart"){
+    }
+    if (nativeEvent.type === "touchstart") {
       const { clientX, clientY } = nativeEvent.touches[0];
       const { offsetLeft, offsetTop } = canvasRef.current;
       contextRef.current.beginPath();
-      contextRef.current.moveTo((clientX - offsetLeft), (clientY - offsetTop));
+      contextRef.current.moveTo(clientX - offsetLeft, clientY - offsetTop);
       setIsDrawing(true);
     }
-
-  }
+  };
 
   const finishDrawing = () => {
     contextRef.current.closePath();
     setIsDrawing(false);
-  }
+  };
 
   const draw = ({ nativeEvent }) => {
     if (!isDrawing) {
       return;
     }
-    if (nativeEvent.type === "mousemove"){
+    if (nativeEvent.type === "mousemove") {
       const { offsetX, offsetY } = nativeEvent;
       contextRef.current.lineTo(offsetX, offsetY);
       contextRef.current.stroke();
     }
-    if (nativeEvent.type === "touchmove"){
+    if (nativeEvent.type === "touchmove") {
       const { clientX, clientY } = nativeEvent.touches[0];
       const { offsetLeft, offsetTop } = canvasRef.current;
-      contextRef.current.lineTo((clientX - offsetLeft), (clientY - offsetTop));
+      contextRef.current.lineTo(clientX - offsetLeft, clientY - offsetTop);
       contextRef.current.stroke();
     }
-
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const canvas = canvasRef.current;
-<<<<<<< HEAD
-<<<<<<< HEAD
     const imageData = canvas.toDataURL();
     console.log(imageData);
     handleSave(round, imageData);
-  }
+  };
 
   return (
     <>
@@ -81,39 +77,14 @@ const SketchPad = ({ round, handleSave }) => {
         onMouseMove={draw}
         onTouchStart={startDrawing}
         onTouchEnd={finishDrawing}
-        onTouchMove ={draw}
+        onTouchMove={draw}
         ref={canvasRef}
       />
-      <Button 
+      <Button
         buttonClass="btn btn-success"
-        handleClick={ (e) => handleSubmit(e) }
+        handleClick={(e) => handleSubmit(e)}
         label="Save"
       />
-=======
-=======
->>>>>>> layout-css
-    const dataURL = canvas.toDataURL();
-    handleSave(round, dataURL);
-  };
-
-  return (
-    <>
-      <div className="container-global">
-        <div className="container-sketchpad">
-          <canvas
-            className="border border-primary"
-            onMouseDown={startDrawing}
-            onMouseUp={finishDrawing}
-            onMouseMove={draw}
-            ref={canvasRef}
-          />
-          <Button
-            buttonClass="submit"
-            handleClick={(e) => handleSubmit(e)}
-            label="Submit"
-          />
-        </div>
-      </div>
     </>
   );
 };
