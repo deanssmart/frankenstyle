@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import Button from "../Button/Button";
 import "../../App.css";
 
-const SketchPad = ({ round, handleSave }) => {
+const SketchPad = ({ word, round, roundInputs, handleSave }) => {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
@@ -64,12 +64,15 @@ const SketchPad = ({ round, handleSave }) => {
     e.preventDefault();
     const canvas = canvasRef.current;
     const imageData = canvas.toDataURL();
-    console.log(imageData);
     handleSave(round, imageData);
   };
 
   return (
     <>
+      {round === 1 ? 
+        <h2>{ word }</h2> : 
+        <h2>{ roundInputs[1] }</h2>
+      }
       <canvas
         className="border border-primary"
         onMouseDown={startDrawing}

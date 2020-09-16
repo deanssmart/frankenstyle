@@ -36,6 +36,7 @@ class GuessForm extends Component {
     return (
       <>
         <img
+          alt="Player Drawing"
           className="container"
           src={round === 2 ? roundInputs[0] : roundInputs[2]}
         />
