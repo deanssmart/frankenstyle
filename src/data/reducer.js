@@ -1,22 +1,20 @@
-const newGameReducer = (state, {
-  gameID,
-  word,
-  player1Name, 
-  player2Name,
-  player3Name,
-  player4Name,
-}) => {
+const newGameReducer = (state, { gameID, word, players, image }) => {
   return {
     ...state,
     gameID,
     word,
-    player1Name,
-    player2Name, 
-    player3Name, 
-    player4Name,
-    round: 1,
-  }
-}
+    players,
+    image,
+    started: true,
+  };
+};
+
+const startGameReducer = (state, { round }) => {
+  return {
+    ...state,
+    round: round + 1.
+  };
+};
 
 const saveRoundReducer = (state, { round, roundInputs }) => {
   return {
@@ -26,21 +24,11 @@ const saveRoundReducer = (state, { round, roundInputs }) => {
   };
 };
 
-// const makeGuessReducer = (state, { round, guess }) => {
-//   return {
-//     ...state,
-//     round: round + 1,
-//     guess,
-//   }
-// }
-
-
-
 const reducer = (state, action) => {
   switch (action.type) {
     case "NEW_GAME": return newGameReducer(state, action);
+    case "START_GAME": return startGameReducer(state, action);
     case "SAVE_ROUND": return saveRoundReducer(state, action);
-    // case "MAKE_GUESS": return makeGuessReducer(state, action);
     default: return state;
   };
 };

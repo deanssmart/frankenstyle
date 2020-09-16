@@ -1,18 +1,24 @@
 export const newGame = ({
     players,
     word,
-    id, 
+    id,
+    image, 
 }) => {
         return {
-           gameID: id,
+           players,
            word,
-           player1Name: players[0],
-           player2Name: players[1],
-           player3Name: players[2],
-           player4Name: players[3], 
+           gameID: id,
+           image,
            type: "NEW_GAME"
-        }
+        };
     };
+
+export const startGame = (round) => {
+    return {
+        round,
+        type: "START_GAME"
+    };
+};
 
 export const saveRound = ({
     gameID,

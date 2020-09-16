@@ -6,11 +6,11 @@ class StartForm extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { 
-            player1Name: props.player1Name,
-            player2Name: props.player2Name,
-            player3Name: props.player3Name,
-            player4Name: props.player4Name,
+        this.state = {
+            player1Name:"",
+            player2Name: "",
+            player3Name: "",
+            player4Name: "",
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -32,7 +32,7 @@ class StartForm extends Component {
             player4Name, 
         } = this.state;
 
-        if(player1Name !== "" && player2Name !== "" && player3Name !== "" && player4Name !== "") {        
+        if(player1Name !== "" && player2Name !== "" && player3Name !== "" && player4Name !== "") {      
             this.props.handleSave(
                 player1Name, 
                 player2Name, 

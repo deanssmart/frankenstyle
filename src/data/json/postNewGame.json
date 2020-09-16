@@ -1,6 +1,6 @@
 {
     "players": ["Dean", "Marta", "Oliver", "Jack"],
-    "word": "Giraffe",
+    "word": "Wombat",
     "id": 1,
-    "image": "/images/cat.jpg" 
+    "image": "data/images/wombat.jpg"
 }
