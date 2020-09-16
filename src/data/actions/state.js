@@ -18,13 +18,13 @@ export const startGame = (round) => {
 export const saveRound = ({
     gameID,
     round,
-    imageData,
+    image_data,
     guess,
 }) => {
     return {
         gameID,
         round,
-        roundInputs: imageData || guess,
+        roundInputs: image_data || guess,
         type: "SAVE_ROUND"
     };
 };
