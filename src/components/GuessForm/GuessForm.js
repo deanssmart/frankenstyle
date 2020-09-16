@@ -9,7 +9,7 @@ class GuessForm extends Component {
         this.state = {
             roundInputs: props.roundInputs,
             round: props.round,
-            guess: props.guess,
+            guess: "",
         };
 
         this.handleChange = this.handleChange.bind(this);

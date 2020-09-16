@@ -6,8 +6,6 @@ const initial = {
   player3Name: "", 
   player4Name: "",
   roundInputs: [],
-  imageData: "",
-  guess: "",
 };
 
 export default initial;
