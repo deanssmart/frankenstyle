@@ -6,7 +6,7 @@ const mapStateToProps = ({ round }) => ({ round });
 
 const mapDispatchToProps = dispatch => {
     return {
-        handleSave: (round, dataURL) => dispatch(postSketch(round, dataURL)),
+        handleSave: (round, imageData) => dispatch(postSketch(round, imageData)),
     };
 };
 

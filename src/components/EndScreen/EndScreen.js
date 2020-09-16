@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
+
 const EndScreen = ({ roundInputs, handleReset }) => {
   return (
     <>
@@ -15,8 +16,8 @@ const EndScreen = ({ roundInputs, handleReset }) => {
         </div>
       </div>
       <Button
-        label="Reset"
-        className="button button-reset"
+        label="New Game"
+        buttonClass="btn btn-success"
         handleClick={handleReset}
       />
     </>

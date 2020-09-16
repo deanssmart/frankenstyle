@@ -46,8 +46,8 @@ const SketchPad = ({ round, handleSave }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const canvas = canvasRef.current;
-    const dataURL = canvas.toDataURL();
-    handleSave(round, dataURL);
+    const imageData = canvas.toDataURL();
+    handleSave(round, imageData);
   }
 
   return (
@@ -62,7 +62,7 @@ const SketchPad = ({ round, handleSave }) => {
       <Button 
         buttonClass="container btn btn-success"
         handleClick={ (e) => handleSubmit(e) }
-        label="Submit"
+        label="Save"
       />
     </>
   );

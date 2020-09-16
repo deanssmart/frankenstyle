@@ -6,9 +6,10 @@ class GuessForm extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { 
+        this.state = {
+            roundInputs: props.roundInputs,
             round: props.round,
-            guess: props.guess,
+            guess: "",
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -22,7 +23,7 @@ class GuessForm extends Component {
    
     handleSubmit(e) {
         e.preventDefault();
-        const { round, guess } = this.state;
+        const { guess, round } = this.state;
 
         if(guess !== "") {        
             this.props.handleGuess(round, guess);
@@ -30,22 +31,28 @@ class GuessForm extends Component {
     };
 
     render() {
-        const { guess } = this.state;
+        const { roundInputs, round, guess } = this.state;
 
         return (
-            <form onSubmit={ this.handleSubmit } className="container">
-                <Input 
-                    name="guess"
-                    type="text"
-                    value={ guess }
-                    handleChange={ (e) => this.handleChange(e) }
-                    required
-                />                
-                <Button
-                    buttonClass="btn btn-primary"
-                    label="Guess"
+            <>
+                <img
+                    className="container" 
+                    src={ round === 2 ? roundInputs[0] : roundInputs[2] } 
                 />
-            </form>
+                <form onSubmit={ this.handleSubmit } className="container">
+                    <Input 
+                        name="guess"
+                        type="text"
+                        value={ guess }
+                        handleChange={ this.handleChange }
+                        required
+                    />                
+                    <Button
+                        buttonClass="btn btn-primary"
+                        label="Guess"
+                    />
+                </form>
+            </>
         );
     }
 }

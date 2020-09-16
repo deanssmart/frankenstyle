@@ -1,35 +1,28 @@
-import initial from "./initial";
+import initial from './initial';
 
-const newGameReducer = (
-  state,
-  { gameID, word, player1Name, player2Name, player3Name, player4Name }
-) => {
+const newGameReducer = (state, { gameID, word, players, image }) => {
   return {
     ...state,
     gameID,
     word,
-    player1Name,
-    player2Name,
-    player3Name,
-    player4Name,
-
-    round: 1,
+    players,
+    image,
+    started: true,
   };
 };
 
-const saveSketchReducer = (state, { round, dataURL }) => {
+const startGameReducer = (state, { round }) => {
   return {
     ...state,
-    round: round + 1,
-    dataURL,
+    round: round + 1.
   };
 };
 
-const makeGuessReducer = (state, { round, guess }) => {
+const saveRoundReducer = (state, { round, roundInputs }) => {
   return {
     ...state,
     round: round + 1,
-    guess,
+    roundInputs: [...state.roundInputs, roundInputs],   
   };
 };
 
@@ -39,17 +32,12 @@ const resetReducer = (state) => {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "NEW_GAME":
-      return newGameReducer(state, action);
-    case "SAVE_SKETCH":
-      return saveSketchReducer(state, action);
-    case "MAKE_GUESS":
-      return makeGuessReducer(state, action);
-    case "RESET":
-      return resetReducer(state);
-    default:
-      return state;
-  }
+    case "NEW_GAME": return newGameReducer(state, action);
+    case "START_GAME": return startGameReducer(state, action);
+    case "SAVE_ROUND": return saveRoundReducer(state, action);
+    case "RESET": return resetReducer(state);
+    default: return state;
+  };
 };
 
 export default reducer;

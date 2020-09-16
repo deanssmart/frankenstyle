@@ -2,11 +2,11 @@ import { connect } from 'react-redux';
 import GuessForm from './GuessForm';
 import { postGuess } from '../../data/actions/api';
 
-const mapStateToProps = ({ round }) => ({ round });
+const mapStateToProps = ({ round, roundInputs }) => ({ round, roundInputs });
 
 const mapDispatchToProps = dispatch => {
     return {
-        handleGuess: (round, guess) => dispatch(postGuess(round, guess))
+        handleGuess: (round, guess) => dispatch(postGuess(round, guess)),
     };
 };
 

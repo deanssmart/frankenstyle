@@ -1,7 +1,7 @@
 // import axios from '../../axios';
 import { newGame } from './state';
-import { saveSketch } from './state';
-import { saveGuess } from './state';
+import { saveRound } from './state';
+// import { saveGuess } from './state';
 import postNewGameData from '../json/postNewGame.json';
 import postSketchData from '../json/postSketchData.json';
 import postGuessData from '../json/postGuessData.json';
@@ -30,9 +30,9 @@ export const postNewGame = (
 //     };
 // };
 
-export const postSketch = (round, dataURL) => {
+export const postSketch = (round, imageData) => {
     return dispatch => {         
-       dispatch(saveSketch(postSketchData)); 
+       dispatch(saveRound(postSketchData)); 
     };
 };
 
@@ -47,13 +47,13 @@ export const postSketch = (round, dataURL) => {
 //     };
 // };
 
-export const postGuess = (round, dataURL) => {
+export const postGuess = (round, guess) => {
     return dispatch => {         
-       dispatch(saveGuess(postGuessData)); 
+       dispatch(saveRound(postGuessData)); 
     };
 };
 
-// export const postGuess = (round, dataURL) => {
+// export const postGuess = (round, guess) => {
 //     return (dispatch, getState) => {         
 //        const id = getState().gameID;
 //        axios.post(games/rounds, { 
