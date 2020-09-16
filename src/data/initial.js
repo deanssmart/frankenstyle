@@ -8,7 +8,7 @@ const initial = {
   word: "",
   guess: "",
   dataURL: "",
-  roundInput: ["A", "B", "C", "C"],
+  roundInputs: [],
 };
 
 export default initial;

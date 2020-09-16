@@ -5,7 +5,7 @@ import { reset } from "../../data/actions/state";
 const mapStateToProps = ({ roundInput }) => ({ roundInput });
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleReset: () => console.log(reset()),
+    handleReset: () => dispatch(reset()),
   };
 };
 
