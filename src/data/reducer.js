@@ -1,3 +1,5 @@
+import initial from './initial';
+
 const newGameReducer = (state, { gameID, word, players, image }) => {
   return {
     ...state,
@@ -24,11 +26,16 @@ const saveRoundReducer = (state, { round, roundInputs }) => {
   };
 };
 
+const resetReducer = (state) => {
+  return { ...initial };
+};
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "NEW_GAME": return newGameReducer(state, action);
     case "START_GAME": return startGameReducer(state, action);
     case "SAVE_ROUND": return saveRoundReducer(state, action);
+    case "RESET": return resetReducer(state);
     default: return state;
   };
 };

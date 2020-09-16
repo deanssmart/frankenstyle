@@ -3,6 +3,7 @@ import StartForm from "../StartForm";
 import GameStart from "../GameStart";
 import SketchPad from "../SketchPad";
 import GuessForm from "../GuessForm";
+import EndScreen from "../EndScreen";
 
 
 const App = ({ round, started }) => (
@@ -13,7 +14,7 @@ const App = ({ round, started }) => (
   (round === 2 ? <GuessForm /> :
   (round === 3 ? <SketchPad /> :
   (round === 4 ? <GuessForm /> :
-   null )))))}
+   <EndScreen /> )))))}
   </>
 );
 

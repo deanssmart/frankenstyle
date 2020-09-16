@@ -62,7 +62,7 @@ const SketchPad = ({ round, handleSave }) => {
       <Button 
         buttonClass="container btn btn-success"
         handleClick={ (e) => handleSubmit(e) }
-        label="Submit"
+        label="Save"
       />
     </>
   );

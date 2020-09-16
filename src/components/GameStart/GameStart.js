@@ -31,9 +31,9 @@ class GameStart extends Component {
                 />
                 <p>{ word }</p>
                 <Button
-                    handleClick={ this.handleSubmit }
+                    label="Ready"
                     buttonClass="btn btn-primary"
-                    label="Start"
+                    handleClick={ this.handleSubmit }
                 />
             </>
         );

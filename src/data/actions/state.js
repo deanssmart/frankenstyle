@@ -1,17 +1,12 @@
-export const newGame = ({
-    players,
-    word,
-    id,
-    image, 
-}) => {
-        return {
-           players,
-           word,
-           gameID: id,
-           image,
-           type: "NEW_GAME"
-        };
+export const newGame = ({ players, word, id, image }) => {
+    return {
+        players,
+        word,
+        gameID: id,
+        image,
+        type: "NEW_GAME"
     };
+};
 
 export const startGame = (round) => {
     return {
@@ -34,17 +29,8 @@ export const saveRound = ({
     };
 };
 
-// export const saveGuess = ({
-//     gameID,
-//     round,
-//     imageData,
-//     guess,
-// }) => {
-//     return {
-//         gameID,
-//         round,
-//         dataURL: imageData,
-//         guess,
-//         type: "MAKE_GUESS"
-//     };
-// };
+export const reset = () => {
+  return {
+    type: "RESET",
+  };
+};
