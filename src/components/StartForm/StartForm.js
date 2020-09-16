@@ -7,21 +7,12 @@ class StartForm extends Component {
   constructor(props) {
     super(props);
 
-<<<<<<< HEAD
-        this.state = {
-            player1Name:"",
-            player2Name: "",
-            player3Name: "",
-            player4Name: "",
-        };
-=======
     this.state = {
       player1Name: props.player1Name,
       player2Name: props.player2Name,
       player3Name: props.player3Name,
       player4Name: props.player4Name,
     };
->>>>>>> layout
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,21 +24,9 @@ class StartForm extends Component {
     this.setState(change);
   }
 
-<<<<<<< HEAD
-        if(player1Name !== "" && player2Name !== "" && player3Name !== "" && player4Name !== "") {      
-            this.props.handleSave(
-                player1Name, 
-                player2Name, 
-                player3Name, 
-                player4Name, 
-                );
-        }
-    };
-=======
   handleSubmit(e) {
     e.preventDefault();
     const { player1Name, player2Name, player3Name, player4Name } = this.state;
->>>>>>> layout
 
     if (
       player1Name !== "" &&
