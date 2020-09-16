@@ -70,6 +70,7 @@ const SketchPad = ({ round, handleSave }) => {
     e.preventDefault();
     const canvas = canvasRef.current;
     const imageData = canvas.toDataURL();
+    console.log(imageData);
     handleSave(round, imageData);
   }
 
