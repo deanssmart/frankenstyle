@@ -6,7 +6,7 @@
 }
 
 p {
-  font-family: var(--font-title);
+  font-family: var(--font-main);
   color: var(--highlights);
   padding: 0;
   margin: 0;
@@ -23,6 +23,12 @@ p {
 
 h1 {
   font-family: "Run", serif;
-  font-size: 5rem;
+  font-size: 4.5rem;
+  color: white;
+}
+
+h2 {
+  font-family: "Run", serif;
+  font-size: 2.5rem;
   color: white;
 }

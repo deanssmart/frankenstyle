@@ -45,19 +45,19 @@ class StartForm extends Component {
       <>
         <div className="container-global">
           <div className="container-form-start">
-            <figure className="monster">
+            {/* <figure className="monster">
               <img
                 className="frank"
                 src="./svgs/frankenweeny.svg"
                 alt="frank"
               />
-            </figure>
-            <form onSubmit={this.handleSubmit} className="form startform">
-              <h1>FrankenStyle</h1>
+            </figure> */}
 
+            <h1 class="start-title">FrankenStyle</h1>
+            <form onSubmit={this.handleSubmit} className="form startform">
               <div className="row1">
                 <Input
-                  label=""
+                  label="Player 1"
                   name="player1Name"
                   type="text"
                   value={player1Name}
@@ -67,7 +67,7 @@ class StartForm extends Component {
               </div>
               <div className="row2">
                 <Input
-                  label=""
+                  label="Player 2"
                   name="player2Name"
                   type="text"
                   value={player2Name}
@@ -77,7 +77,7 @@ class StartForm extends Component {
               </div>
               <div className="row3">
                 <Input
-                  label=""
+                  label="Player 3"
                   name="player3Name"
                   type="text"
                   value={player3Name}
@@ -87,7 +87,7 @@ class StartForm extends Component {
               </div>
               <div className="row4">
                 <Input
-                  label=""
+                  label="Player 4"
                   name="player4Name"
                   type="text"
                   value={player4Name}
@@ -96,6 +96,7 @@ class StartForm extends Component {
                 />
               </div>
               <Button buttonClass="button button-startform" label="Start" />
+              <Button buttonClass="button rules " label="Rules" />
             </form>
           </div>
         </div>

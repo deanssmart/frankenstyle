@@ -2,7 +2,9 @@
   border-radius: 50%;
   background-color: var(--secondary-colour);
   font-size: large;
-  color: var(--highlights);
+  color: white;
   border: var(--highlights) 2px;
   text-align: center;
+  padding: 3rem;
+  margin: 1em;
 }
