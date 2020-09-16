@@ -5,12 +5,16 @@ label {
 
 label {
   font-family: var(--font-main);
+  color: var(--highlights);
 }
 
 input {
   font-size: 1.5rem;
   outline: none;
   border-radius: 0.2rem;
+  text-decoration: none;
+  border: none;
+  text-align: center;
 }
 
 .form-group {

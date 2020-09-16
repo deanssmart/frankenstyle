@@ -29,14 +29,15 @@
   padding: 2em;
   box-sizing: border-box;
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 1.1rem;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 10em 1em 1em 1em;
+  grid-template-rows: 10em 10em 3em 5em;
 }
 
 .button-startform {
-  margin-top: 25%;
-  margin-left: 70%;
+  grid-column: 1 / span 2;
+  margin-right: 25%;
+  margin-left: 25%;
 }
 
 /* Sketchpad */
