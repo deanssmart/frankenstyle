@@ -1,5 +1,7 @@
 .container-global {
   margin: 0;
+  width: auto;
+  height: 100%;
   box-sizing: border-box;
 }
 
@@ -8,6 +10,14 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.container-form-players {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .container-sketchpad {
