@@ -1,6 +1,5 @@
 .form {
   font-family: var(--font-main);
-
   align-content: center;
   border: none;
   outline: none;
@@ -8,5 +7,6 @@
 }
 
 .form-group {
-  justify-self: center;
+  text-align: center;
+  font-size: 2.5rem;
 }

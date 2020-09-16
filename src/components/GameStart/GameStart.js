@@ -27,17 +27,18 @@ class GameStart extends Component {
     return (
       <div className="container-global">
         <div className="container-grid-gamestart">
-          <div className="container-img">
+          <div className="card-upper">
             <img alt={word} className="img-startgame" src={image} />
           </div>
+          <div className="card-lower">
+            <p className="gamestart-word">{word}</p>
 
-          <p className="gamestart-word">{word}</p>
-
-          <Button
-            label="Ready"
-            buttonClass="button button-padding button-gamestart"
-            handleClick={this.handleSubmit}
-          />
+            <Button
+              label="Ready"
+              buttonClass="button button-padding "
+              handleClick={this.handleSubmit}
+            />
+          </div>
         </div>
       </div>
     );

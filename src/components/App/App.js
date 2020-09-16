@@ -11,7 +11,7 @@ const App = ({ round, started }) => (
       <StartForm />
     ) : round === 0 ? (
       <GameStart />
-    ) : round === 0 || round === 3 ? (
+    ) : round === 1 || round === 3 ? (
       <SketchPad />
     ) : round === 2 || round === 4 ? (
       <GuessForm />
