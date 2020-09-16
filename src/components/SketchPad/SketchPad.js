@@ -1,11 +1,14 @@
 import React, { useRef, useEffect, useState } from "react";
 import Button from "../Button/Button";
+import { CirclePicker } from 'react-color';
 import "../../App.css";
 
 const SketchPad = ({ word, round, roundInputs, handleSave }) => {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
+  const [color, setColor] = useState("#f44336");
+  const [reRender, setReRender] = useState("");  
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -17,10 +20,10 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
     const context = canvas.getContext("2d");
     context.scale(2, 2);
     context.lineCap = "round";
-    context.strokeStyle = `${round === 1 ? "blue" : "green"}`;
+    context.strokeStyle = color;
     context.lineWidth = 5;
     contextRef.current = context;
-  }, [round]);
+  }, [round, color]);
 
   const startDrawing = ({ nativeEvent }) => {
     if (nativeEvent.type === "mousedown") {
@@ -40,6 +43,9 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
 
   const finishDrawing = () => {
     contextRef.current.closePath();
+    const canvas = canvasRef.current;
+    const imageData = canvas.toDataURL();
+    setReRender(imageData);
     setIsDrawing(false);
   };
 
@@ -67,12 +73,20 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
     handleSave(round, imageData);
   };
 
+  const handleColor = (color) => {
+    setColor(color.hex);
+  };
+
   return (
     <>
       {round === 1 ? 
         <h2>{ word }</h2> : 
         <h2>{ roundInputs[1] }</h2>
       }
+      <CirclePicker 
+        color={ color }
+        onChangeComplete={handleColor}
+      />
       <canvas
         className="border border-primary"
         onMouseDown={startDrawing}
