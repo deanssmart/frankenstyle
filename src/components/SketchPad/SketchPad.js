@@ -22,7 +22,7 @@ const SketchPad = ({ round, handleSave }) => {
     contextRef.current = context;
   }, [round])
 
-  const startDrawing = ({ nativeEvent }) => {
+  const startDrawing = ({ nativeEvent }) => {    
     const { offsetX, offsetY } = nativeEvent;
     contextRef.current.beginPath()
     contextRef.current.moveTo(offsetX, offsetY)
@@ -57,6 +57,9 @@ const SketchPad = ({ round, handleSave }) => {
         onMouseDown={startDrawing}
         onMouseUp={finishDrawing}
         onMouseMove={draw}
+        onTouchStart={startDrawing}
+        onTouchEnd={finishDrawing}
+        onTouchMove ={draw}
         ref={canvasRef}
       />
       <Button 

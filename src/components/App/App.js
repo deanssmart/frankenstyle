@@ -8,13 +8,12 @@ import EndScreen from "../EndScreen";
 
 const App = ({ round, started }) => (
   <>
-  { round === 0 && !started ? <StartForm /> : 
-  (round === 0 ? <GameStart /> : 
-  (round === 1 ? <SketchPad /> : 
-  (round === 2 ? <GuessForm /> :
-  (round === 3 ? <SketchPad /> :
-  (round === 4 ? <GuessForm /> :
-   <EndScreen /> )))))}
+  { !started ? <StartForm /> : 
+    round === 0 ? <GameStart /> : 
+    round === 1 || round === 3 ? <SketchPad /> : 
+    round === 2 || round === 4 ? <GuessForm /> :
+    <EndScreen />
+  }
   </>
 );
 
