@@ -3,22 +3,43 @@
   width: auto;
   height: 100%;
   box-sizing: border-box;
+  padding: 5rem 5rem 5rem 5rem;
 }
 
-.container-form {
+/* Start Form */
+.container-form-start {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
-.container-form-players {
+.container-form {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
 }
+
+.startform {
+  width: 46.25rem;
+  height: 26rem;
+  margin: 0 auto;
+  padding: 2em;
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10em 1em 1em 1em;
+}
+
+.button-startform {
+  margin-top: 25%;
+  margin-left: 70%;
+}
+
+/* Sketchpad */
 
 .container-sketchpad {
   display: flex;

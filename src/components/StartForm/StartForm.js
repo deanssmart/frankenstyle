@@ -7,21 +7,12 @@ class StartForm extends Component {
   constructor(props) {
     super(props);
 
-<<<<<<< HEAD
-        this.state = {
-            player1Name:"",
-            player2Name: "",
-            player3Name: "",
-            player4Name: "",
-        };
-=======
     this.state = {
-      player1Name: props.player1Name,
-      player2Name: props.player2Name,
-      player3Name: props.player3Name,
-      player4Name: props.player4Name,
+      player1Name: "",
+      player2Name: "",
+      player3Name: "",
+      player4Name: "",
     };
->>>>>>> layout
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,21 +24,9 @@ class StartForm extends Component {
     this.setState(change);
   }
 
-<<<<<<< HEAD
-        if(player1Name !== "" && player2Name !== "" && player3Name !== "" && player4Name !== "") {      
-            this.props.handleSave(
-                player1Name, 
-                player2Name, 
-                player3Name, 
-                player4Name, 
-                );
-        }
-    };
-=======
   handleSubmit(e) {
     e.preventDefault();
     const { player1Name, player2Name, player3Name, player4Name } = this.state;
->>>>>>> layout
 
     if (
       player1Name !== "" &&
@@ -65,8 +44,8 @@ class StartForm extends Component {
     return (
       <>
         <div className="container-global">
-          <div className="container-form">
-            <form onSubmit={this.handleSubmit} className="container">
+          <div className="container-form-start">
+            <form onSubmit={this.handleSubmit} className="form startform">
               <Input
                 label="Player 1"
                 name="player1Name"
@@ -99,7 +78,7 @@ class StartForm extends Component {
                 handleChange={(e) => this.handleChange(e, "player4Name")}
                 required
               />
-              <Button buttonClass="btn btn-primary" label="Start" />
+              <Button buttonClass="button button-startform" label="Start" />
             </form>
           </div>
         </div>

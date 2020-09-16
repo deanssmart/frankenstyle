@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import Button from "../Button/Button";
+import "../../App.css";
 
 const SketchPad = ({ round, handleSave }) => {
   const canvasRef = useRef(null);
@@ -45,26 +46,6 @@ const SketchPad = ({ round, handleSave }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const canvas = canvasRef.current;
-<<<<<<< HEAD
-    const imageData = canvas.toDataURL();
-    handleSave(round, imageData);
-  }
-
-  return (
-    <>
-      <canvas
-        className="border border-primary"
-        onMouseDown={startDrawing}
-        onMouseUp={finishDrawing}
-        onMouseMove={draw}
-        ref={canvasRef}
-      />
-      <Button 
-        buttonClass="container btn btn-success"
-        handleClick={ (e) => handleSubmit(e) }
-        label="Save"
-      />
-=======
     const dataURL = canvas.toDataURL();
     handleSave(round, dataURL);
   };
@@ -87,7 +68,6 @@ const SketchPad = ({ round, handleSave }) => {
           />
         </div>
       </div>
->>>>>>> layout
     </>
   );
 };

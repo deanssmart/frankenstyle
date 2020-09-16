@@ -1,0 +1,19 @@
+input,
+label {
+  display: block;
+}
+
+label {
+  font-family: var(--font-main);
+}
+
+input {
+  font-size: 1.5rem;
+  outline: none;
+  border-radius: 0.2rem;
+}
+
+.form-group {
+  text-align: center;
+  font-size: 2.5rem;
+}
