@@ -26,6 +26,7 @@ class GameStart extends Component {
         return (
             <>
                 <img
+                    alt={ word }
                     className="container" 
                     src={ image } 
                 />
