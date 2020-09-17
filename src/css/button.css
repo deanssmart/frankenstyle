@@ -28,15 +28,9 @@
 }
 
 .buttons-colour-pick {
-<<<<<<< HEAD
-  align-self: end;
-  justify-self: center;
-}
-=======
   align-self: stretch;  
 }
 
 .button-newgame {
   margin-top: 5rem;
 }
->>>>>>> b60fcdaaed1fed8626c54be5a72d4a4deed5d609
