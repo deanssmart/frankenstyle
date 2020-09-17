@@ -1,9 +1,11 @@
-img {
-}
-
-.img-startgame {
+.img-card {
   height: 100%;
-  width: auto%;
+  width: 99.8%;
   object-fit: cover;
   justify-self: center;
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.img-card-round-background {
+  background-color: white;
 }

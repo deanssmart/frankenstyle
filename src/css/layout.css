@@ -72,56 +72,37 @@
 }
 /* Game Start */
 
-.container-grid-gamestart {
+.container-card-grid {
   width: auto;
   margin: 0;
-  box-sizing: border-box;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: 35rem;
+  grid-template-columns: 30rem;
   grid-template-rows: 17rem 17rem;
   justify-items: center;
-}
-.lower-card {
-  width: auto;
-  color: var(--secondary-colour);
-  align-self: center;
+  border-radius: 2rem;
+  box-shadow: 1rem 1rem 1rem #150030;
+  border: 2px solid var(--highlights);
 }
 
-.upper-card {
-  justify-self: center;
+.card-lower {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Sketchpad */
+.container-grid-sketchpad {
+  display: flex;
+  align-items: center;
+}
 
 .container-sketchpad {
   margin: auto 0;
-}
-
-.container-grid-sketchpad {
-  width: auto;
-  margin: 0;
-  box-sizing: border-box;
-  display: grid;
-  grid-gap: 0.5rem;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: 20rem 8rem;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 1rem 1rem 1rem #150030;
+  border-radius: 1rem;
 }
 
 /* Guess Form */
-
-.container-grid-guess {
-  width: auto;
-  margin: 0;
-  box-sizing: border-box;
-  display: grid;
-  grid-gap: 0.5rem;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: 25rem 8rem;
-  align-items: center;
-  justify-content: center;
-}
 
 /* End Screen */ ;

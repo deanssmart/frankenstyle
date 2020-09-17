@@ -8,12 +8,11 @@
 p {
   font-family: var(--font-main);
   color: var(--highlights);
-  padding: 0;
-  margin: 0;
 }
 
 .gamestart-word {
   font-size: 3rem;
+  margin: 0;
 }
 
 .word {

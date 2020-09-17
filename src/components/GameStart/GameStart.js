@@ -26,10 +26,9 @@ class GameStart extends Component {
 
     return (
       <div className="container-global">
-        <div className="container-grid-gamestart">
-          <img alt={word} className="img-startgame" src={image} />
-
-          <div className="lower-card">
+        <div className="container-card-grid">
+          <img alt={word} className="img-card" src={image} />
+          <div className="card-lower">
             <p className="gamestart-word">{word}</p>
 
             <Button

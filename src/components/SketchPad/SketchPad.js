@@ -14,6 +14,7 @@ const SketchPad = ({ round, handleSave }) => {
     canvas.style.width = `${500}px`;
     canvas.style.height = `${500}px`;
     canvas.style.background = "white";
+    canvas.style.borderRadius = `${1}rem ${1}rem ${1}rem`;
 
     const context = canvas.getContext("2d");
     context.scale(2, 2);
@@ -86,7 +87,7 @@ const SketchPad = ({ round, handleSave }) => {
           <Button
             buttonClass="button button-sketchpad"
             handleClick={(e) => handleSubmit(e)}
-            label="Save"
+            label="Submit"
           />
         </div>
       </div>
