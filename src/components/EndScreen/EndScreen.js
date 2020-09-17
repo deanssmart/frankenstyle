@@ -27,8 +27,8 @@ const EndScreen = ({ word, image, roundInputs, handleReset, players }) => {
               />
               <div className="card-lower">
                 <p className="card-word card-lower-elements endscreen-card-text">
-                  <span>{players[1]} </span>
-                  <span>Guessed:</span>
+                  {/* <span>{players[1]} </span>
+                  <span>Guessed:</span> */}
                   <span>{roundInputs[1]}</span>
                 </p>
               </div>
@@ -43,8 +43,8 @@ const EndScreen = ({ word, image, roundInputs, handleReset, players }) => {
               />
               <div className="card-lower">
                 <p className="card-word card-lower-elements endscreen-card-text">
-                  <span>{players[3]} </span>
-                  <span>Guessed:</span>
+                  {/* <span>{players[3]} </span>
+                  <span>Guessed:</span> */}
                   <span>{roundInputs[3]}</span>
                 </p>
               </div>
