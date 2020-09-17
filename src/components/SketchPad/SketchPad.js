@@ -87,31 +87,29 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
   };
 
   return (
-    <>
-      <div className="container-global">
-        <div className="container-sketchpad">
-          <div className="container-grid-sketchpad">
-            {round === 1 ? <h2>{word}</h2> : <h2>{roundInputs[1]}</h2>}
-            <canvas
-              className="border border-primary"
-              onMouseDown={startDrawing}
-              onMouseUp={finishDrawing}
-              onMouseMove={draw}
-              onTouchStart={startDrawing}
-              onTouchEnd={finishDrawing}
-              onTouchMove={draw}
-              ref={canvasRef}
-            />
-            <Button
-              buttonClass="button button-sketchpad"
-              handleClick={(e) => handleSubmit(e)}
-              label="Submit"
-            />
-            <CirclePicker color={color} onChangeComplete={handleColor} />
-          </div>
+    <div className="container-global">
+      <div className="container-sketchpad">
+        {round === 1 ? <h2>{word}</h2> : <h2>{roundInputs[1]}</h2>}
+        <div className="container-grid-sketchpad">
+          <canvas
+            className="border border-primary"
+            onMouseDown={startDrawing}
+            onMouseUp={finishDrawing}
+            onMouseMove={draw}
+            onTouchStart={startDrawing}
+            onTouchEnd={finishDrawing}
+            onTouchMove={draw}
+            ref={canvasRef}
+          />
+          <Button
+            buttonClass="button button-sketchpad"
+            handleClick={(e) => handleSubmit(e)}
+            label="Submit"
+          />
+          <CirclePicker color={color} onChangeComplete={handleColor} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
