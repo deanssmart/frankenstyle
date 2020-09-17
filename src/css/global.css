@@ -1,3 +1,18 @@
 body {
   background-color: var(--bg-colour);
+  margin: 0;
+}
+::selection {
+  background: var(--highlights);
+}
+::-moz-selection {
+  background: var(--highlights);
+}
+
+p.word::selection {
+  background: var(--secondary-colour);
+}
+
+label::selection {
+  background: var(--secondary-colour);
 }

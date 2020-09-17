@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Run";
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/Run.otf");
+}
+
+p {
+  font-family: var(--font-main);
+  color: var(--highlights);
+}
+
+.gamestart-word {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.word {
+  font-family: var(--font-title);
+  color: var(--highlights);
+}
+
+h1 {
+  font-family: "Run", serif;
+  font-size: 4.5rem;
+  color: white;
+}
+
+h2 {
+  font-family: "Run", serif;
+  font-size: 2.5rem;
+  color: white;
+}
