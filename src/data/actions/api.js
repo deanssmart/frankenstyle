@@ -1,66 +1,39 @@
-// import axios from '../../axios';
+import axios from '../../axios';
 import { newGame } from './state';
 import { saveRound } from './state';
-import postNewGameData from '../json/postNewGame.json';
-import postSketchData from '../json/postSketchData.json';
-import postSketchData2 from '../json/postSketchData2.json';
-import postGuessData from '../json/postGuessData.json';
-import postGuessData2 from '../json/postGuessData2.json';
 
 export const postNewGame = (
-    player1Name, 
+    player1Name,
     player2Name,
     player3Name,
-    player4Name, 
-    ) => {
-        return dispatch => {
-             dispatch(newGame(postNewGameData));
+    player4Name,
+) => {
+    return dispatch => {
+        axios.post('/', {
+            player1: player1Name,
+            player2: player2Name,
+            player3: player3Name,
+            player4: player4Name,
+        }).then(({ data }) => dispatch(newGame(data.data)));
     };
 };
-
-// export const postNewGame = (
-//     player1Name, 
-//     player2Name,
-//     player3Name,
-//     player4Name, 
-//     ) => {
-//         return dispatch => {
-//             axios.post('/games', {
-//               players: [player1Name, player2Name, player3Name, player4Name],
-//             }).then(({ data }) => dispatch(newGame(data.data)));
-//     };
-// };
 
 export const postSketch = (round, imageData) => {
-    return dispatch => {         
-       dispatch(saveRound(round === 1 ? postSketchData : postSketchData2)); 
+    return (dispatch, getState) => {
+        const id = getState().gameID;
+        axios.post(`${id}`, {
+            round,
+            image_data: imageData,
+        }).then(({ data }) => dispatch(saveRound(data.data)));
     };
 };
-
-// export const postSketch = (round, dataURL) => {
-//     return (dispatch, getState) => {         
-//        const id = getState().gameID;
-//        axios.post(games/rounds, { 
-//             gameID,
-//             round, 
-//             dataURL,
-//         }).then(({ data }) => dispatch(saveSketch(data.data))); 
-//     };
-// };
 
 export const postGuess = (round, guess) => {
-    return dispatch => {         
-       dispatch(saveRound(round === 2 ? postGuessData : postGuessData2)); 
+    return (dispatch, getState) => {
+        const id = getState().gameID;
+        axios.post(`${id}`, {
+            round,
+            guess,
+        }).then(({ data }) => dispatch(saveRound(data.data)));
     };
 };
-
-// export const postGuess = (round, guess) => {
-//     return (dispatch, getState) => {         
-//        const id = getState().gameID;
-//        axios.post(games/rounds, { 
-//             gameID,
-//             round, 
-//             dataURL,
-//         }).then(({ data }) => dispatch(saveGuess(data.data))); 
-//     };
-// };

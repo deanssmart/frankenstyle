@@ -22,7 +22,7 @@ const saveRoundReducer = (state, { round, roundInputs }) => {
   return {
     ...state,
     round: round + 1,
-    roundInputs: [...state.roundInputs, roundInputs],   
+    roundInputs: [...state.roundInputs, roundInputs],
   };
 };
 

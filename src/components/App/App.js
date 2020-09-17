@@ -7,17 +7,12 @@ import EndScreen from "../EndScreen";
 
 const App = ({ round, started }) => (
   <>
-    {!started ? (
-      <StartForm />
-    ) : round === 0 ? (
-      <GameStart />
-    ) : round === 1 || round === 3 ? (
-      <SketchPad />
-    ) : round === 2 || round === 4 ? (
-      <GuessForm />
-    ) : (
-      <EndScreen />
-    )}
+    {!started ? <StartForm /> :
+      round === 0 ? <GameStart /> :
+        round === 1 || round === 3 ? <SketchPad /> :
+          round === 2 || round === 4 ? <GuessForm /> :
+            <EndScreen />
+    }
   </>
 );
 

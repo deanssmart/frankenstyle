@@ -7,8 +7,8 @@ const EndScreen = ({ word, image, roundInputs, handleReset }) => {
     <>
       <div className="endScreen-container ">
         <div className="round-result-container">
-          <h1>{ word }</h1>
-          <img alt={ word } src={ image } />
+          <h1>{word}</h1>
+          <img alt={word} src={image} />
         </div>
 
         <div className="round-result-container">
@@ -21,6 +21,7 @@ const EndScreen = ({ word, image, roundInputs, handleReset }) => {
           <h2>{roundInputs[3]}</h2>
         </div>
       </div>
+
       <Button
         label="New Game"
         buttonClass="button button-padding"
