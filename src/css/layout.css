@@ -93,7 +93,7 @@
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 30rem;
-  grid-template-rows: 17rem 17rem;
+  grid-template-rows: 25rem 10rem;
   justify-items: center;
   border-radius: 2rem;
   box-shadow: 1rem 1rem 1rem #150030;
@@ -108,6 +108,8 @@
 .card-lower-elements {
   align-self: center;
 }
+
+/*Guess Card */
 
 /* Sketchpad */
 .container-grid-sketchpad {
@@ -124,7 +126,7 @@
 }
 
 .container-sketchpad-buttons {
-  display: grid;  
+  display: grid;
 }
 
 /* End Screen */

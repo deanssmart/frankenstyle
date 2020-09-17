@@ -17,6 +17,10 @@
 
 .button-guess {
   align-self: center;
+  margin-top: 0rem;
+  margin: 0rem 0.5rem 0.5rem 0rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .button-sketchpad {
