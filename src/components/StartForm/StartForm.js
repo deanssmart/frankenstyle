@@ -45,65 +45,75 @@ class StartForm extends Component {
       <>
         <div className="container-global">
           <div className="container-form-start">
-            {/* <figure className="monster">
-              <img
-                className="frank"
-                src="./svgs/frankenweeny.svg"
-                alt="frank"
-              />
-            </figure> */}
-
             <h1 class="start-title">FrankenStyle</h1>
-            <form onSubmit={this.handleSubmit} className="form startform">
-              <div className="row1">
-                <Input
-                  label="Player 1"
-                  name="player1Name"
-                  type="text"
-                  value={player1Name}
-                  handleChange={(e) => this.handleChange(e, "player1Name")}
-                  required
-                />
-              </div>
-              <div className="row2">
-                <Input
-                  label="Player 2"
-                  name="player2Name"
-                  type="text"
-                  value={player2Name}
-                  handleChange={(e) => this.handleChange(e, "player2Name")}
-                  required
-                />
-              </div>
-              <div className="row3">
-                <Input
-                  label="Player 3"
-                  name="player3Name"
-                  type="text"
-                  value={player3Name}
-                  handleChange={(e) => this.handleChange(e, "player3Name")}
-                  required
-                />
-              </div>
-              <div className="row4">
-                <Input
-                  label="Player 4"
-                  name="player4Name"
-                  type="text"
-                  value={player4Name}
-                  handleChange={(e) => this.handleChange(e, "player4Name")}
-                  required
-                />
-              </div>
-              <Button buttonClass="button button-startform" label="Start" />
 
-              <Button buttonClass="button rules" label="Rules" />
+            <div className="startform">
+              <form onSubmit={this.handleSubmit} className="form form-grid">
+                <div className="row1">
+                  <Input
+                    label="Player 1"
+                    name="player1Name"
+                    type="text"
+                    value={player1Name}
+                    handleChange={(e) => this.handleChange(e, "player1Name")}
+                    required
+                  />
+                </div>
+                <div className="row2">
+                  <Input
+                    label="Player 2"
+                    name="player2Name"
+                    type="text"
+                    value={player2Name}
+                    handleChange={(e) => this.handleChange(e, "player2Name")}
+                    required
+                  />
+                </div>
+                <div className="row3">
+                  <Input
+                    label="Player 3"
+                    name="player3Name"
+                    type="text"
+                    value={player3Name}
+                    handleChange={(e) => this.handleChange(e, "player3Name")}
+                    required
+                  />
+                </div>
+                <div className="row4">
+                  <Input
+                    label="Player 4"
+                    name="player4Name"
+                    type="text"
+                    value={player4Name}
+                    handleChange={(e) => this.handleChange(e, "player4Name")}
+                    required
+                  />
+                </div>
+                <Button
+                  buttonClass=" buttons-startgame button-startform"
+                  label="Start"
+                />
+              </form>
+
+              <Button buttonClass="buttons-startgame rules" label="Rules" />
 
               <div className="rules-text toggle-content is-visible">
                 <h2>Rules</h2>
-                <p>sr;iough;dsfhgn</p>
+                <p>
+                  <span>sr;iough;dsfhgnsr;iough;</span>
+                  <span>dsfhgnsr;iough;dsfhgnsr</span>
+                  <span>;iough;dsfhgn</span>
+                </p>
               </div>
-            </form>
+              {/* 
+                <Fade bottom cascade>
+                  <div>
+                    <h2>React Reveal</h2>
+                    <h2>React Reveal</h2>
+                    <h2>React Reveal</h2>
+                  </div>
+                </Fade> */}
+            </div>
           </div>
         </div>
       </>
