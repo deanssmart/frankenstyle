@@ -1,6 +1,5 @@
 .container-global {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-content: center;
   margin: 0 auto;
@@ -71,12 +70,11 @@
   grid-column: 4;
   grid-row: 2 / 3;
   justify-self: center;
-  /* align-self: center; */
 }
 .rules {
   grid-row: 2 / 3;
   justify-self: center;
-  /* align-self: center; */
+
 }
 
 /*Card - Guess Form, SketchPad, EndScreen */
@@ -87,7 +85,11 @@
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 30rem;
+<<<<<<< HEAD
   grid-template-rows: 25rem 10rem;
+=======
+  grid-template-rows: 25rem 17rem;
+>>>>>>> b60fcdaaed1fed8626c54be5a72d4a4deed5d609
   justify-items: center;
   border-radius: 2rem;
   box-shadow: 1rem 1rem 1rem #150030;
@@ -120,7 +122,11 @@
 }
 
 .container-sketchpad-buttons {
+<<<<<<< HEAD
   display: grid;
+=======
+  display: flex;  
+>>>>>>> b60fcdaaed1fed8626c54be5a72d4a4deed5d609
 }
 
 /* End Screen */

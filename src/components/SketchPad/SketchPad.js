@@ -24,7 +24,7 @@ const SketchPad = ({ word, round, roundInputs, handleSave, players }) => {
     context.scale(2, 2);
     context.lineCap = "round";
     context.strokeStyle = color;
-    context.lineWidth = 5;
+    context.lineWidth = 8;
     contextRef.current = context;
 
     const img = new Image();
@@ -94,11 +94,11 @@ const SketchPad = ({ word, round, roundInputs, handleSave, players }) => {
        {round === 1 ? 
         <>
           <h2>{word}</h2>
-          <h2>{players[0]}</h2> 
+          <p className="player-word">{players[0]}</p> 
         </> :
         <>
           <h2>{roundInputs[1]}</h2>
-          <h2>{players[2]}</h2> 
+          <p className="player-word">{players[2]}</p> 
         </>
         }
        </div> 
@@ -118,6 +118,8 @@ const SketchPad = ({ word, round, roundInputs, handleSave, players }) => {
               className="buttons-colour-pick"
               color={color}
               onChangeComplete={handleColor}
+              colors={ ["#f44336", "#e91e63", "#9c27b0", "#673ab7", "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4", "#009688", "#4caf50", "#8bc34a", "#cddc39", "#ffeb3b", "#ffc107", "#ff9800", "#ff5722", "#ffffff", "#000000"]}
+              circleSize={60}
             />
             <Button
               buttonClass="button button-sketchpad"

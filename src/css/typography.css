@@ -15,8 +15,12 @@ p span {
 }
 
 .card-word {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 0;
+}
+
+.player-word {
+  font-size: 2.5rem;
 }
 
 .word {
@@ -37,6 +41,6 @@ h2 {
 }
 
 .endscreen-card-text {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
 }
