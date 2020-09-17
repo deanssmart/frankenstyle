@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import Button from "../Button/Button";
-import { CirclePicker } from 'react-color';
+import { CirclePicker } from "react-color";
 import "../../App.css";
 
 const SketchPad = ({ word, round, roundInputs, handleSave }) => {
@@ -30,7 +30,7 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
     const img = new Image();
     img.onload = () => {
       context.drawImage(img, 0, 0, 500, 500);
-    }
+    };
     img.src = reRender;
   }, [round, color, reRender]);
 
@@ -87,7 +87,7 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
   };
 
   return (
-
+    
     <div className="container-global">
       <div className="container-sketchpad">
         {round === 1 ? 

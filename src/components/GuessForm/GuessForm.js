@@ -34,10 +34,11 @@ class GuessForm extends Component {
     const { roundInputs, round, guess } = this.state;
 
     return (
-      <>
+
         <div className="container-global">
           <div className="container-card-grid">
             <img
+              alt="Player Drawing"
               className="img-card img-card-round-background"
               src={round === 2 ? roundInputs[0] : roundInputs[2]}
             />
@@ -53,7 +54,6 @@ class GuessForm extends Component {
             </form>
           </div>
         </div>
-      </>
     );
   }
 }
