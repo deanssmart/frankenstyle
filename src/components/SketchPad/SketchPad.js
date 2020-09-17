@@ -90,6 +90,10 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
 
     <div className="container-global">
       <div className="container-sketchpad">
+        {round === 1 ? 
+          <h2>{ word }</h2> : 
+          <h2>{ roundInputs[1] }</h2>
+        }
         <div className="container-grid-sketchpad">
           <canvas
             className="border border-primary"

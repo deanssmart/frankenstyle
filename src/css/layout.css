@@ -43,32 +43,38 @@
 }
 
 .row1 {
+  justify-self: center;
   grid-row: 1;
   grid-column: 2/3;
 }
 
 .row2 {
+  justify-self: center;
   grid-row: 1;
   grid-column: 3/4;
 }
 
 .row3 {
+  justify-self: center;
   grid-row: 2;
   grid-column: 2;
 }
 
 .row4 {
+  justify-self: center;
   grid-row: 2;
   grid-column: 3;
 }
 .button-startform {
   grid-column: 4;
-  grid-row: 2;
-  align-self: center;
+  grid-row: 2 / 3;
+  justify-self: center;
+  /* align-self: center; */
 }
 .rules {
-  grid-row: 2;
-  align-self: center;
+  grid-row: 2 / 3;
+  justify-self: center;
+  /* align-self: center; */
 }
 /* Game Start */
 
@@ -89,6 +95,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.card-lower-elements {
+  align-self: center;
 }
 
 /* Sketchpad */

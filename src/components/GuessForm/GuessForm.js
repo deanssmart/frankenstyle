@@ -41,18 +41,16 @@ class GuessForm extends Component {
               className="img-card img-card-round-background"
               src={round === 2 ? roundInputs[0] : roundInputs[2]}
             />
-            <div className="card-lower">
-              <form onSubmit={this.handleSubmit} className="container ">
-                <Input
-                  name="guess"
-                  type="text"
-                  value={guess}
-                  handleChange={this.handleChange}
-                  required
-                />
-                <Button buttonClass="button button-guess" label="Guess" />
-              </form>
-            </div>
+            <form onSubmit={this.handleSubmit} className="container card-lower">
+              <Input
+                name="guess"
+                type="text"
+                value={guess}
+                handleChange={this.handleChange}
+                required
+              />
+              <Button buttonClass="button button-guess card-lower-elements" label="Guess" />
+            </form>
           </div>
         </div>
       </>

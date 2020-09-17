@@ -21,7 +21,7 @@ export const postNewGame = (
 export const postSketch = (round, imageData) => {
     return (dispatch, getState) => {
         const id = getState().gameID;
-        axios.post(`${id}`, {
+        axios.post(`${id}/rounds`, {
             round,
             image_data: imageData,
         }).then(({ data }) => dispatch(saveRound(data.data)));
@@ -31,7 +31,7 @@ export const postSketch = (round, imageData) => {
 export const postGuess = (round, guess) => {
     return (dispatch, getState) => {
         const id = getState().gameID;
-        axios.post(`${id}`, {
+        axios.post(`${id}/rounds`, {
             round,
             guess,
         }).then(({ data }) => dispatch(saveRound(data.data)));
