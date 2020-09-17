@@ -35,21 +35,26 @@ class GuessForm extends Component {
 
     return (
       <>
-        <img
-          alt="Player Drawing"
-          className="container"
-          src={round === 2 ? roundInputs[0] : roundInputs[2]}
-        />
-        <form onSubmit={this.handleSubmit} className="container">
-          <Input
-            name="guess"
-            type="text"
-            value={guess}
-            handleChange={this.handleChange}
-            required
-          />
-          <Button buttonClass="button" label="Guess" />
-        </form>
+        <div className="container-global">
+          <div className="container-card-grid">
+            <img
+              className="img-card img-card-round-background"
+              src={round === 2 ? roundInputs[0] : roundInputs[2]}
+            />
+            <div className="card-lower">
+              <form onSubmit={this.handleSubmit} className="container ">
+                <Input
+                  name="guess"
+                  type="text"
+                  value={guess}
+                  handleChange={this.handleChange}
+                  required
+                />
+                <Button buttonClass="button button-guess" label="Guess" />
+              </form>
+            </div>
+          </div>
+        </div>
       </>
     );
   }
