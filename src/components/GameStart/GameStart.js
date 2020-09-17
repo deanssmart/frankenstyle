@@ -30,7 +30,6 @@ class GameStart extends Component {
           <img alt={word} className="img-card" src={image} />
           <div className="card-lower">
             <p className="card-word card-lower-elements">{word}</p>
-
             <Button
               label="Ready"
               buttonClass="button gamestart-button card-lower-elements"
