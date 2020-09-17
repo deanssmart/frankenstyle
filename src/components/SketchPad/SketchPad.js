@@ -92,7 +92,6 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
         <div className="container-sketchpad">
           <div className="container-grid-sketchpad">
             {round === 1 ? <h2>{word}</h2> : <h2>{roundInputs[1]}</h2>}
-
             <canvas
               className="border border-primary"
               onMouseDown={startDrawing}
