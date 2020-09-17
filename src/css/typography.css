@@ -10,7 +10,11 @@ p {
   color: var(--highlights);
 }
 
-.gamestart-word {
+p span {
+  display: block;
+}
+
+.card-word {
   font-size: 3rem;
   margin: 0;
 }
@@ -30,4 +34,9 @@ h2 {
   font-family: "Run", serif;
   font-size: 2.5rem;
   color: white;
+}
+
+.endscreen-card-text {
+  font-size: 2rem;
+  text-align: center;
 }
