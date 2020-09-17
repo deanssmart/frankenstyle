@@ -7,16 +7,16 @@ const mapStateToProps = ({ started }) => ({ started });
 const mapDispatchToProps = dispatch => {
     return {
         handleSave: (
-            player1Name, 
+            player1Name,
             player2Name,
             player3Name,
-            player4Name,   
-            ) => dispatch(postNewGame(
-                player1Name, 
-                player2Name,
-                player3Name,
-                player4Name,         
-                ))
+            player4Name,
+        ) => dispatch(postNewGame(
+            player1Name,
+            player2Name,
+            player3Name,
+            player4Name,
+        ))
     };
 };
 

@@ -8,14 +8,14 @@ class GameStart extends Component {
         this.state = {
             word: props.word,
             image: props.image,
-            round: props.round,            
+            round: props.round,
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-   
+
     handleSubmit(e) {
-        e.preventDefault();     
+        e.preventDefault();
         const { round } = this.state;
         this.props.handleStart(round);
     };
@@ -26,15 +26,15 @@ class GameStart extends Component {
         return (
             <>
                 <img
-                    alt={ word }
-                    className="container" 
-                    src={ image } 
+                    alt={word}
+                    className="container"
+                    src={image}
                 />
-                <p>{ word }</p>
+                <p>{word}</p>
                 <Button
                     label="Ready"
                     buttonClass="btn btn-primary"
-                    handleClick={ this.handleSubmit }
+                    handleClick={this.handleSubmit}
                 />
             </>
         );

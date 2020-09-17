@@ -8,7 +8,7 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
   const contextRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [color, setColor] = useState("#f44336");
-  // const [reRender, setReRender] = useState("");  
+  const [reRender, setReRender] = useState("");
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -18,13 +18,20 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
     canvas.style.height = `${500}px`;
 
     const context = canvas.getContext("2d");
+    console.log(canvasRef);
     context.scale(2, 2);
     context.lineCap = "round";
     context.strokeStyle = color;
     context.lineWidth = 5;
-    // context.restore();
     contextRef.current = context;
-  }, [round, color, /*reRender*/]);
+
+    const img = new Image();
+    img.onload = () => {
+      context.drawImage(img, 0, 0, 500, 500);
+    }
+    img.src = reRender;
+
+  }, [round, color, reRender]);
 
   const startDrawing = ({ nativeEvent }) => {
     if (nativeEvent.type === "mousedown") {
@@ -44,11 +51,9 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
 
   const finishDrawing = () => {
     contextRef.current.closePath();
-    // const canvas = canvasRef.current;
-    // const context = canvas.getContext("2d");
-    // const imageData = context.save();
-    // console.log(imageData);
-    // setReRender(imageData);
+    const canvas = canvasRef.current;
+    const imageData = canvas.toDataURL();
+    setReRender(imageData);
     setIsDrawing(false);
   };
 
@@ -82,15 +87,15 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
 
   return (
     <>
-      {round === 1 ? 
-        <h2>{ word }</h2> : 
-        <h2>{ roundInputs[1] }</h2>
+      {round === 1 ?
+        <h2>{word}</h2> :
+        <h2>{roundInputs[1]}</h2>
       }
-      <CirclePicker 
-        color={ color }
+      <CirclePicker
+        color={color}
         onChangeComplete={handleColor}
       />
-      <canvas  
+      <canvas
         className="border border-primary"
         onMouseDown={startDrawing}
         onMouseUp={finishDrawing}

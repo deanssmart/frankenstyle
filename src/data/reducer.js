@@ -18,11 +18,18 @@ const startGameReducer = (state, { round }) => {
   };
 };
 
+const playerReadyReducer = (state, { ready }) => {
+  return {
+    ...state,
+    ready: true,
+  }
+}
+
 const saveRoundReducer = (state, { round, roundInputs }) => {
   return {
     ...state,
     round: round + 1,
-    roundInputs: [...state.roundInputs, roundInputs],   
+    roundInputs: [...state.roundInputs, roundInputs],
   };
 };
 
@@ -34,6 +41,7 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "NEW_GAME": return newGameReducer(state, action);
     case "START_GAME": return startGameReducer(state, action);
+    case "PLAYER_READY": return playerReadyReducer(state, action);
     case "SAVE_ROUND": return saveRoundReducer(state, action);
     case "RESET": return resetReducer(state);
     default: return state;
