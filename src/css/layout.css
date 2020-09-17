@@ -1,11 +1,17 @@
 .container-global {
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
   align-content: center;
   margin: 0 auto;
   width: auto;
   box-sizing: border-box;
   padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Start Form */
@@ -105,14 +111,20 @@
 
 /* Sketchpad */
 .container-grid-sketchpad {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  justify-items: center;
 }
 
 .container-sketchpad {
   margin: auto 0;
   box-shadow: 1rem 1rem 1rem #150030;
   border-radius: 1rem;
+}
+
+.container-sketchpad-buttons {
+  display: grid;  
 }
 
 /* End Screen */

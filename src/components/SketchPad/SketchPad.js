@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import { CirclePicker } from "react-color";
 import "../../App.css";
 
-const SketchPad = ({ word, round, roundInputs, handleSave }) => {
+const SketchPad = ({ word, round, roundInputs, handleSave, players }) => {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
@@ -90,9 +90,18 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
 
     <div className="container-global">
       <div className="container-sketchpad">
-        {round === 1 ? 
-          <h2>{ word }</h2> : 
-          <h2>{ roundInputs[1] }</h2>
+      <div className="container-header">
+       {round === 1 ? 
+        <>
+          <h2>{word}</h2>
+          <h2>{players[0]}</h2> 
+        </> :
+        <>
+          <h2>{roundInputs[1]}</h2>
+          <h2>{players[2]}</h2> 
+        </>
+        }
+       </div> 
         <div className="container-grid-sketchpad">
           <canvas
             className="border border-primary"
@@ -104,15 +113,19 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
             onTouchMove={draw}
             ref={canvasRef}
           />
-          <Button
-            buttonClass="button button-sketchpad"
-            handleClick={(e) => handleSubmit(e)}
-            label="Submit"
-          />
-          <CirclePicker
-            color={color}
-            onChangeComplete={handleColor}
-          />
+          <div className="container-sketchpad-buttons">
+            <CirclePicker
+              className="buttons-colour-pick"
+              color={color}
+              onChangeComplete={handleColor}
+            />
+            <Button
+              buttonClass="button button-sketchpad"
+              handleClick={(e) => handleSubmit(e)}
+              label="Submit"
+            />
+          </div>
+
         </div>
       </div>
     </div>
