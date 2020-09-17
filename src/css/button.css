@@ -26,3 +26,7 @@
 .buttons-colour-pick {
   align-self: stretch;  
 }
+
+.button-newgame {
+  margin-top: 5rem;
+}
