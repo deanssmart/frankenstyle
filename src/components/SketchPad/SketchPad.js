@@ -94,11 +94,11 @@ const SketchPad = ({ word, round, roundInputs, handleSave, players }) => {
        {round === 1 ? 
         <>
           <h2>{word}</h2>
-          <h2>{players[0]}</h2> 
+          <p className="player-word">{players[0]}</p> 
         </> :
         <>
           <h2>{roundInputs[1]}</h2>
-          <h2>{players[2]}</h2> 
+          <p className="player-word">{players[2]}</p> 
         </>
         }
        </div> 

@@ -19,6 +19,10 @@ p span {
   margin: 0;
 }
 
+.player-word {
+  font-size: 3rem;
+}
+
 .word {
   font-family: var(--font-title);
   color: var(--highlights);

@@ -7,6 +7,7 @@ class GuessForm extends Component {
     super(props);
 
     this.state = {
+      players: props.players,
       roundInputs: props.roundInputs,
       round: props.round,
       guess: "",
@@ -31,7 +32,7 @@ class GuessForm extends Component {
   }
 
   render() {
-    const { roundInputs, round, guess } = this.state;
+    const { players, roundInputs, round, guess } = this.state;
 
     return (
 
@@ -42,8 +43,9 @@ class GuessForm extends Component {
               className="img-card img-card-round-background"
               src={round === 2 ? roundInputs[0] : roundInputs[2]}
             />
-            <form onSubmit={this.handleSubmit} className="container card-lower">
+            <form onSubmit={this.handleSubmit} className="container form card-lower">  
               <Input
+                label={round === 2 ? players[1] : players[3]}
                 name="guess"
                 type="text"
                 value={guess}
