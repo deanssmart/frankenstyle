@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
+import Fade from "react-reveal/Fade";
 import "../../App.css";
 
 class StartForm extends Component {
@@ -12,10 +13,15 @@ class StartForm extends Component {
       player2Name: "",
       player3Name: "",
       player4Name: "",
+      show: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState({ show: !this.state.show });
   }
 
   handleChange(e, input) {
@@ -95,24 +101,21 @@ class StartForm extends Component {
                 />
               </form>
 
-              <Button buttonClass="buttons-startgame rules" label="Rules" />
-
-              <div className="rules-text toggle-content is-visible">
-                <h2>Rules</h2>
-                <p>
-                  <span>sr;iough;dsfhgnsr;iough;</span>
-                  <span>dsfhgnsr;iough;dsfhgnsr</span>
-                  <span>;iough;dsfhgn</span>
-                </p>
-              </div>
-              {/* 
-                <Fade bottom cascade>
-                  <div>
-                    <h2>React Reveal</h2>
-                    <h2>React Reveal</h2>
-                    <h2>React Reveal</h2>
-                  </div>
-                </Fade> */}
+              <Button
+                buttonClass="buttons-startgame rules"
+                handleClick={this.handleClick}
+                label="Rules"
+              />
+              <Fade bottom cascade collapse when={this.state.show}>
+                <div className="rules-text toggle-content is-visible">
+                  <h2 className="rules-header">Rules</h2>
+                  <p>
+                    <span>sr;iough;dsfhgnsr;iough;</span>
+                    <span>dsfhgnsr;iough;dsfhgnsr</span>
+                    <span>;iough;dsfhgn</span>
+                  </p>
+                </div>
+              </Fade>
             </div>
           </div>
         </div>
