@@ -87,7 +87,7 @@ const SketchPad = ({ word, round, roundInputs, handleSave, players }) => {
   };
 
   return (
-    
+
     <div className="container-global">
       <div className="container-sketchpad">
       <div className="container-header">
