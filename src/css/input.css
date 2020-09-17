@@ -4,20 +4,20 @@ label {
 }
 
 label {
-  font-family: var(--font-main);
+  font-family: var(--font-title);
   color: var(--highlights);
+  padding-bottom: 0.3rem;
+  font-size: 1.2rem;
 }
 
 input {
-  font-size: 1.5rem;
   outline: none;
-  border-radius: 0.2rem;
+  font-size: 1.5rem;
+  border-radius: 0.4rem;
   text-decoration: none;
-  border: none;
+  border: 0.5rem white solid;
   text-align: center;
-}
-
-.form-group {
-  text-align: center;
-  font-size: 2.5rem;
+  background: transparent;
+  color: white;
+  z-index: 999;
 }

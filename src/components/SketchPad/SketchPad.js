@@ -13,6 +13,8 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
     canvas.height = 1000;
     canvas.style.width = `${500}px`;
     canvas.style.height = `${500}px`;
+    canvas.style.background = "white";
+    canvas.style.borderRadius = `${1}rem ${1}rem ${1}rem`;
 
     const context = canvas.getContext("2d");
     context.scale(2, 2);
@@ -68,6 +70,7 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
   };
 
   return (
+<<<<<<< HEAD
     <>
       {round === 1 ? 
         <h2>{ word }</h2> : 
@@ -89,6 +92,29 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
         label="Save"
       />
     </>
+=======
+    <div className="container-global">
+      <div className="container-sketchpad">
+        <div className="container-grid-sketchpad">
+          <canvas
+            className="border border-primary"
+            onMouseDown={startDrawing}
+            onMouseUp={finishDrawing}
+            onMouseMove={draw}
+            onTouchStart={startDrawing}
+            onTouchEnd={finishDrawing}
+            onTouchMove={draw}
+            ref={canvasRef}
+          />
+          <Button
+            buttonClass="button button-sketchpad"
+            handleClick={(e) => handleSubmit(e)}
+            label="Submit"
+          />
+        </div>
+      </div>
+    </div>
+>>>>>>> layout-css
   );
 };
 

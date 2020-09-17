@@ -1,14 +1,23 @@
 .container-global {
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
   width: auto;
-  height: 100%;
   box-sizing: border-box;
-  padding: 5rem 5rem 5rem 5rem;
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
 }
 
 /* Start Form */
 
+/* .monster {
+  z-index: 1;
+  position: relative;
+  position: 700;
+} */
+
 .container-form-start {
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -19,36 +28,81 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   width: 100%;
 }
 
 .startform {
-  width: 46.25rem;
-  height: 26rem;
-  margin: 0 auto;
-  padding: 2em;
+  width: auto;
+  margin: 0;
   box-sizing: border-box;
   display: grid;
   grid-gap: 1.1rem;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 10em 10em 3em 5em;
+  grid-template-columns: 10em 20em 20em 10em;
+  grid-template-rows: 6em 8em;
+  align-items: end;
 }
 
+.row1 {
+  grid-row: 1;
+  grid-column: 2/3;
+}
+
+.row2 {
+  grid-row: 1;
+  grid-column: 3/4;
+}
+
+.row3 {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.row4 {
+  grid-row: 2;
+  grid-column: 3;
+}
 .button-startform {
-  grid-column: 1 / span 2;
-  margin-right: 25%;
-  margin-left: 25%;
+  grid-column: 4;
+  grid-row: 2;
+  align-self: center;
+}
+.rules {
+  grid-row: 2;
+  align-self: center;
+}
+/* Game Start */
+
+.container-card-grid {
+  width: auto;
+  margin: 0;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 30rem;
+  grid-template-rows: 17rem 17rem;
+  justify-items: center;
+  border-radius: 2rem;
+  box-shadow: 1rem 1rem 1rem #150030;
+  border: 2px solid var(--highlights);
+}
+
+.card-lower {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Sketchpad */
+.container-grid-sketchpad {
+  display: flex;
+  align-items: center;
+}
 
 .container-sketchpad {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  margin: auto 0;
+  box-shadow: 1rem 1rem 1rem #150030;
+  border-radius: 1rem;
 }
 
 /* Guess Form */
 
-/* End Screen */
+/* End Screen */ ;
