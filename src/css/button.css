@@ -18,3 +18,13 @@
 .button-guess {
   align-self: center;
 }
+
+.button-sketchpad {
+  align-self: center;
+  justify-self: center;
+}
+
+.buttons-colour-pick {
+  align-self: end;
+  justify-self: center;
+}

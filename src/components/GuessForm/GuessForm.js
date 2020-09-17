@@ -50,7 +50,7 @@ class GuessForm extends Component {
                 handleChange={this.handleChange}
                 required
               />
-              <Button buttonClass="button button-guess card-lower-elements" label="Guess" />
+              <Button buttonClass="button button-guess" label="Guess" />
             </form>
           </div>
         </div>
