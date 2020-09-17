@@ -96,7 +96,8 @@ class StartForm extends Component {
                 />
               </div>
               <Button buttonClass="button button-startform" label="Start" />
-              <Button buttonClass="button rules " label="Rules" />
+
+              <Button buttonClass="button rules" label="Rules" />
             </form>
           </div>
         </div>
