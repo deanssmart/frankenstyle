@@ -10,7 +10,7 @@ const EndScreen = ({ word, image, roundInputs, handleReset, players }) => {
             <div className="container-card-grid-endscreen card-grid-endscreen-original">
               <img
                 className="img-card img-card-round-background"
-                alt="starting-word-and-image"
+                alt={word}
                 src={image}
               />
               <div className="card-lower">
