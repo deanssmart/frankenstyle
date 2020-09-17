@@ -30,8 +30,11 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
       context.drawImage(img, 0, 0, 500, 500);
     }
     img.src = reRender;
-
   }, [round, color, reRender]);
+
+  const handleColor = (color) => {
+    setColor(color.hex);
+  };
 
   const startDrawing = ({ nativeEvent }) => {
     if (nativeEvent.type === "mousedown") {
@@ -79,10 +82,6 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
     const canvas = canvasRef.current;
     const imageData = canvas.toDataURL();
     handleSave(round, imageData);
-  };
-
-  const handleColor = (color) => {
-    setColor(color.hex);
   };
 
   return (
