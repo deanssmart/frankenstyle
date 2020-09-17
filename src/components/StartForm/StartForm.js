@@ -53,7 +53,7 @@ class StartForm extends Component {
               />
             </figure> */}
 
-            <h1 class="start-title">FrankenStyle</h1>
+            <h1 className="title">FrankenStyle</h1>
             <form onSubmit={this.handleSubmit} className="form startform">
               <div className="row1">
                 <Input
