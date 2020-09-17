@@ -5,7 +5,6 @@ const initial = {
   players: [],
   roundInputs: [],
   image: "",
-  ready: false,
 };
 
 export default initial;

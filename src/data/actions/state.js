@@ -15,13 +15,6 @@ export const startGame = (round) => {
     };
 };
 
-export const playerReady = (ready) => {
-    return {
-        ready,
-        type: "PLAYER_READY"
-    };
-};
-
 export const saveRound = ({
     gameID,
     round,
