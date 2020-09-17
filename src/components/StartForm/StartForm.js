@@ -98,6 +98,11 @@ class StartForm extends Component {
               <Button buttonClass="button button-startform" label="Start" />
 
               <Button buttonClass="button rules" label="Rules" />
+
+              <div className="rules-text toggle-content is-visible">
+                <h2>Rules</h2>
+                <p>sr;iough;dsfhgn</p>
+              </div>
             </form>
           </div>
         </div>
