@@ -1,11 +1,14 @@
 import React, { useRef, useEffect, useState } from "react";
 import Button from "../Button/Button";
+import { CirclePicker } from "react-color";
 import "../../App.css";
 
 const SketchPad = ({ word, round, roundInputs, handleSave }) => {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
+  const [color, setColor] = useState("#f44336");
+  const [reRender, setReRender] = useState("");
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -17,12 +20,23 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
     canvas.style.borderRadius = `${1}rem ${1}rem ${1}rem`;
 
     const context = canvas.getContext("2d");
+    console.log(canvasRef);
     context.scale(2, 2);
     context.lineCap = "round";
-    context.strokeStyle = `${round === 1 ? "blue" : "green"}`;
+    context.strokeStyle = color;
     context.lineWidth = 5;
     contextRef.current = context;
-  }, [round]);
+
+    const img = new Image();
+    img.onload = () => {
+      context.drawImage(img, 0, 0, 500, 500);
+    };
+    img.src = reRender;
+  }, [round, color, reRender]);
+
+  const handleColor = (color) => {
+    setColor(color.hex);
+  };
 
   const startDrawing = ({ nativeEvent }) => {
     if (nativeEvent.type === "mousedown") {
@@ -42,6 +56,9 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
 
   const finishDrawing = () => {
     contextRef.current.closePath();
+    const canvas = canvasRef.current;
+    const imageData = canvas.toDataURL();
+    setReRender(imageData);
     setIsDrawing(false);
   };
 
@@ -70,51 +87,32 @@ const SketchPad = ({ word, round, roundInputs, handleSave }) => {
   };
 
   return (
-<<<<<<< HEAD
     <>
-      {round === 1 ? 
-        <h2>{ word }</h2> : 
-        <h2>{ roundInputs[1] }</h2>
-      }
-      <canvas
-        className="border border-primary"
-        onMouseDown={startDrawing}
-        onMouseUp={finishDrawing}
-        onMouseMove={draw}
-        onTouchStart={startDrawing}
-        onTouchEnd={finishDrawing}
-        onTouchMove={draw}
-        ref={canvasRef}
-      />
-      <Button
-        buttonClass="btn btn-success"
-        handleClick={(e) => handleSubmit(e)}
-        label="Save"
-      />
-    </>
-=======
-    <div className="container-global">
-      <div className="container-sketchpad">
-        <div className="container-grid-sketchpad">
-          <canvas
-            className="border border-primary"
-            onMouseDown={startDrawing}
-            onMouseUp={finishDrawing}
-            onMouseMove={draw}
-            onTouchStart={startDrawing}
-            onTouchEnd={finishDrawing}
-            onTouchMove={draw}
-            ref={canvasRef}
-          />
-          <Button
-            buttonClass="button button-sketchpad"
-            handleClick={(e) => handleSubmit(e)}
-            label="Submit"
-          />
+      <div className="container-global">
+        <div className="container-sketchpad">
+          <div className="container-grid-sketchpad">
+            {round === 1 ? <h2>{word}</h2> : <h2>{roundInputs[1]}</h2>}
+
+            <canvas
+              className="border border-primary"
+              onMouseDown={startDrawing}
+              onMouseUp={finishDrawing}
+              onMouseMove={draw}
+              onTouchStart={startDrawing}
+              onTouchEnd={finishDrawing}
+              onTouchMove={draw}
+              ref={canvasRef}
+            />
+            <Button
+              buttonClass="button button-sketchpad"
+              handleClick={(e) => handleSubmit(e)}
+              label="Submit"
+            />
+            <CirclePicker color={color} onChangeComplete={handleColor} />
+          </div>
         </div>
       </div>
-    </div>
->>>>>>> layout-css
+    </>
   );
 };
 

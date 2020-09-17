@@ -35,7 +35,6 @@ class GuessForm extends Component {
 
     return (
       <>
-<<<<<<< HEAD
         <img
           alt="Player Drawing"
           className="container"
@@ -51,7 +50,7 @@ class GuessForm extends Component {
           />
           <Button buttonClass="button" label="Guess" />
         </form>
-=======
+
         <div className="container-global">
           <div className="container-card-grid">
             <img
@@ -72,7 +71,6 @@ class GuessForm extends Component {
             </div>
           </div>
         </div>
->>>>>>> layout-css
       </>
     );
   }
