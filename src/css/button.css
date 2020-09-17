@@ -20,11 +20,9 @@
 }
 
 .button-sketchpad {
-  align-self: center;
-  justify-self: center;
+  align-self: center;  
 }
 
 .buttons-colour-pick {
-  align-self: end;
-  justify-self: center;
+  align-self: stretch;  
 }

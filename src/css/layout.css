@@ -1,6 +1,5 @@
 .container-global {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-content: center;
   margin: 0 auto;
@@ -77,12 +76,11 @@
   grid-column: 4;
   grid-row: 2 / 3;
   justify-self: center;
-  /* align-self: center; */
 }
 .rules {
   grid-row: 2 / 3;
   justify-self: center;
-  /* align-self: center; */
+
 }
 
 /*Card - Guess Form, SketchPad, EndScreen */
@@ -124,7 +122,7 @@
 }
 
 .container-sketchpad-buttons {
-  display: grid;  
+  display: flex;  
 }
 
 /* End Screen */
