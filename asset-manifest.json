@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/GroupProject_Front-End/static/css/main.83e85688.chunk.css",
+    "main.css": "/GroupProject_Front-End/static/css/main.dccf6e8e.chunk.css",
     "main.js": "/GroupProject_Front-End/static/js/main.bbc175dc.chunk.js",
     "main.js.map": "/GroupProject_Front-End/static/js/main.bbc175dc.chunk.js.map",
     "runtime-main.js": "/GroupProject_Front-End/static/js/runtime-main.9a40ac4d.js",
@@ -8,16 +8,16 @@
     "static/js/2.909ec38b.chunk.js": "/GroupProject_Front-End/static/js/2.909ec38b.chunk.js",
     "static/js/2.909ec38b.chunk.js.map": "/GroupProject_Front-End/static/js/2.909ec38b.chunk.js.map",
     "index.html": "/GroupProject_Front-End/index.html",
-    "precache-manifest.7c25dbd04005a7f02672015fc7f1bd15.js": "/GroupProject_Front-End/precache-manifest.7c25dbd04005a7f02672015fc7f1bd15.js",
+    "precache-manifest.e2061c125f8e788d7c5ca78b58198e61.js": "/GroupProject_Front-End/precache-manifest.e2061c125f8e788d7c5ca78b58198e61.js",
     "service-worker.js": "/GroupProject_Front-End/service-worker.js",
-    "static/css/main.83e85688.chunk.css.map": "/GroupProject_Front-End/static/css/main.83e85688.chunk.css.map",
+    "static/css/main.dccf6e8e.chunk.css.map": "/GroupProject_Front-End/static/css/main.dccf6e8e.chunk.css.map",
     "static/js/2.909ec38b.chunk.js.LICENSE.txt": "/GroupProject_Front-End/static/js/2.909ec38b.chunk.js.LICENSE.txt",
     "static/media/App.css": "/GroupProject_Front-End/static/media/Run.92e5c3c7.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.9a40ac4d.js",
     "static/js/2.909ec38b.chunk.js",
-    "static/css/main.83e85688.chunk.css",
+    "static/css/main.dccf6e8e.chunk.css",
     "static/js/main.bbc175dc.chunk.js"
   ]
 }
