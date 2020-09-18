@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/GroupProject_Front-End/static/css/main.dc53f301.chunk.css",
-    "main.js": "/GroupProject_Front-End/static/js/main.d222771f.chunk.js",
-    "main.js.map": "/GroupProject_Front-End/static/js/main.d222771f.chunk.js.map",
+    "main.css": "/GroupProject_Front-End/static/css/main.4a699782.chunk.css",
+    "main.js": "/GroupProject_Front-End/static/js/main.6e2c69d4.chunk.js",
+    "main.js.map": "/GroupProject_Front-End/static/js/main.6e2c69d4.chunk.js.map",
     "runtime-main.js": "/GroupProject_Front-End/static/js/runtime-main.9a40ac4d.js",
     "runtime-main.js.map": "/GroupProject_Front-End/static/js/runtime-main.9a40ac4d.js.map",
-    "static/js/2.909ec38b.chunk.js": "/GroupProject_Front-End/static/js/2.909ec38b.chunk.js",
-    "static/js/2.909ec38b.chunk.js.map": "/GroupProject_Front-End/static/js/2.909ec38b.chunk.js.map",
+    "static/js/2.748e6ee4.chunk.js": "/GroupProject_Front-End/static/js/2.748e6ee4.chunk.js",
+    "static/js/2.748e6ee4.chunk.js.map": "/GroupProject_Front-End/static/js/2.748e6ee4.chunk.js.map",
     "index.html": "/GroupProject_Front-End/index.html",
-    "precache-manifest.87b1f5a9654333acea40fd0cccc5b774.js": "/GroupProject_Front-End/precache-manifest.87b1f5a9654333acea40fd0cccc5b774.js",
+    "precache-manifest.0a577f88b287dfd587892f741a791b19.js": "/GroupProject_Front-End/precache-manifest.0a577f88b287dfd587892f741a791b19.js",
     "service-worker.js": "/GroupProject_Front-End/service-worker.js",
-    "static/css/main.dc53f301.chunk.css.map": "/GroupProject_Front-End/static/css/main.dc53f301.chunk.css.map",
-    "static/js/2.909ec38b.chunk.js.LICENSE.txt": "/GroupProject_Front-End/static/js/2.909ec38b.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/GroupProject_Front-End/static/media/Run.92e5c3c7.woff"
+    "static/css/main.4a699782.chunk.css.map": "/GroupProject_Front-End/static/css/main.4a699782.chunk.css.map",
+    "static/js/2.748e6ee4.chunk.js.LICENSE.txt": "/GroupProject_Front-End/static/js/2.748e6ee4.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/GroupProject_Front-End/static/media/Frankentype.5ff2604a.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.9a40ac4d.js",
-    "static/js/2.909ec38b.chunk.js",
-    "static/css/main.dc53f301.chunk.css",
-    "static/js/main.d222771f.chunk.js"
+    "static/js/2.748e6ee4.chunk.js",
+    "static/css/main.4a699782.chunk.css",
+    "static/js/main.6e2c69d4.chunk.js"
   ]
 }
