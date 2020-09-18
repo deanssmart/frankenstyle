@@ -8,8 +8,9 @@ const EndScreen = ({ word, image, roundInputs, handleReset, players }) => {
         <div className="container-endscreen">
           <div className="shadow">
             <div className="container-card-grid-endscreen card-grid-endscreen-original">
+              <p className="card-word card-lower-elements endscreen-card-text">Original</p>
               <img
-                className="img-card img-card-round-background"
+                className="img-card img-card-round-background img-card-endscreen"
                 alt={word}
                 src={image}
               />
@@ -20,32 +21,32 @@ const EndScreen = ({ word, image, roundInputs, handleReset, players }) => {
           </div>
           <div className="shadow">
             <div className="container-card-grid-endscreen card-grid-endscreen-sketch1">
+              <p className="card-word card-lower-elements endscreen-card-text">{players[0]}</p>
               <img
-                className="img-card img-card-round-background"
+                className="img-card img-card-round-background img-card-endscreen"
                 alt="player-1-drawing"
                 src={roundInputs[0]}
               />
               <div className="card-lower">
-                <p className="card-word card-lower-elements endscreen-card-text">
-                  {/* <span>{players[1]} </span>
-                  <span>Guessed:</span> */}
-                  <span>{roundInputs[1]}</span>
+                  <p className="card-word card-lower-elements endscreen-card-text">
+                  <span>{players[1]} </span>
+                  <span span className="word">{roundInputs[1]}</span>
                 </p>
               </div>
             </div>
           </div>
           <div className="shadow">
             <div className="container-card-grid-endscreen card-grid-endscreen-sketch2">
+              <p className="card-word card-lower-elements endscreen-card-text">{players[2]}</p>
               <img
-                className="img-card img-card-round-background"
+                className="img-card img-card-round-background img-card-endscreen"
                 alt="player-2-drawing"
                 src={roundInputs[2]}
               />
               <div className="card-lower">
                 <p className="card-word card-lower-elements endscreen-card-text">
-                  {/* <span>{players[3]} </span>
-                  <span>Guessed:</span> */}
-                  <span>{roundInputs[3]}</span>
+                  <span>{players[3]} </span>
+                  <span className="word">{roundInputs[3]}</span>
                 </p>
               </div>
             </div>
