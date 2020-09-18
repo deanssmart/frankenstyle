@@ -20,7 +20,7 @@ p span {
 }
 
 .player-word {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .word {
@@ -78,6 +78,16 @@ h2 {
 
 h1.start-title {
   margin: 0.5rem 0rem 0.5rem 0rem;
+  animation: 0.8s shake infinite alternate;
+}
+
+@keyframes shake {
+  0% { transform: skewX(-15deg); }
+  5% { transform: skewX(15deg); }
+  10% { transform: skewX(-15deg); }
+  15% { transform: skewX(15deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }  
 }
 
 h2.rules-header {
