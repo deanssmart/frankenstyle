@@ -51,7 +51,7 @@ class StartForm extends Component {
       <>
         <div className="container-global">
           <div className="container-form-start">
-            <h1 class="start-title">FrankenStyle</h1>
+            <h1 className="start-title">FrankenStyle</h1>
 
             <div className="startform">
               <form onSubmit={this.handleSubmit} className="form form-grid">

@@ -147,7 +147,7 @@
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 18.5rem;
-  grid-template-rows: 17rem 7rem;
+  grid-template-rows: 3.5rem 17rem 7rem;
   justify-items: center;
   border-radius: 2rem;
   box-shadow: 1rem 1rem 1rem #150030;
@@ -155,16 +155,16 @@
 
 .card-grid-endscreen-original {
   grid-column: 1;
-  grid-row: 2 / span 2;
+  grid-row: 2 / span 3;
 }
 .card-grid-endscreen-sketch1 {
   grid-column: 2;
-  grid-row: 2 / span 2;
+  grid-row: 2 / span 3;
 }
 
 .card-grid-endscreen-sketch2 {
   grid-column: 3;
-  grid-row: 2 / span 2;
+  grid-row: 2 / span 3;
 }
 
 .button-newgame {
