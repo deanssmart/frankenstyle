@@ -147,7 +147,7 @@
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 18.5rem;
-  grid-template-rows: 12.5rem 12.5rem;
+  grid-template-rows: 3.5rem 17rem 7rem;
   justify-items: center;
   border-radius: 2rem;
   box-shadow: 1rem 1rem 1rem #150030;
@@ -155,16 +155,16 @@
 
 .card-grid-endscreen-original {
   grid-column: 1;
-  grid-row: 2 / span 2;
+  grid-row: 2 / span 3;
 }
 .card-grid-endscreen-sketch1 {
   grid-column: 2;
-  grid-row: 2 / span 2;
+  grid-row: 2 / span 3;
 }
 
 .card-grid-endscreen-sketch2 {
   grid-column: 3;
-  grid-row: 2 / span 2;
+  grid-row: 2 / span 3;
 }
 
 .button-newgame {
@@ -174,3 +174,124 @@
 .shadow {
   box-shadow: 1rem 1rem 1rem #150030;
 }
+
+
+/* media queries */
+
+/* @media only screen and (max-width: 985px) {
+  .container-form-start {
+    margin-top: 0;
+  }
+
+  .startform {
+    grid-template-columns: 20em 20em;
+    grid-template-rows: 6em 8em 10em;
+    align-items: end;
+  }
+
+  .row1 {
+    justify-self: center;
+    grid-row: 1;
+    grid-column: 1;
+  }
+  
+  .row2 {
+    justify-self: center;
+    grid-row: 1;
+    grid-column: 2;
+  }
+  
+  .row3 {
+    justify-self: center;
+    grid-row: 2;
+    grid-column: 1;
+  }
+  
+  .row4 {
+    justify-self: center;
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .button-startform {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+  }
+  .rules {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: center;  
+  }
+
+}
+
+@media only screen and (max-width: 635px) {
+  .startform {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button-startform {
+    align-self: center;
+  }
+
+  .rules {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 530px) {
+  .container-global {
+    padding: 0.5rem
+  }
+
+  .container-card-grid {
+    grid-template-columns: 100vw;
+  }
+
+  .container-header {
+    flex-direction: column-reverse;
+    justify-content: start;    
+  }
+
+  .container-header > * {
+    align-self: center;
+    margin: 0.5rem 0 0 0;    
+  }
+
+  .container-grid-sketchpad {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-grid-sketchpad > canvas {
+    align-self: center;
+    width: 350px !important;
+    height: 350px !important;
+  }
+
+  .container-sketchpad-buttons {
+    display: flex;
+  }
+
+  .buttons-colour-pick {
+    display: none !important;
+  }
+
+  .button-sketchpad {
+    margin: auto !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .gamestart-button {
+    align-self: center;
+  }
+}
+
+@media only screen and (max-width: 635px) {
+    .title {
+      font-size: 9vw;
+  }
+} */

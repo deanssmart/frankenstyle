@@ -7,7 +7,7 @@ const SketchPad = ({ word, round, roundInputs, handleSave, players }) => {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
-  const [color, setColor] = useState("#f44336");
+  const [color, setColor] = useState("#000000");
   const [reRender, setReRender] = useState("");
 
   useEffect(() => {
@@ -20,7 +20,6 @@ const SketchPad = ({ word, round, roundInputs, handleSave, players }) => {
     canvas.style.borderRadius = `${1}rem ${1}rem ${1}rem`;
 
     const context = canvas.getContext("2d");
-    console.log(canvasRef);
     context.scale(2, 2);
     context.lineCap = "round";
     context.strokeStyle = color;
