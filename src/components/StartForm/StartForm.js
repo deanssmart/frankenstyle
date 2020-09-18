@@ -106,16 +106,38 @@ class StartForm extends Component {
                 handleClick={this.handleClick}
                 label="Rules"
               />
-              <Fade bottom cascade collapse when={this.state.show}>
-                <div className="rules-text toggle-content is-visible">
-                  <h2 className="rules-header">Rules</h2>
-                  <p>
-                    <span>sr;iough;dsfhgnsr;iough;</span>
-                    <span>dsfhgnsr;iough;dsfhgnsr</span>
-                    <span>;iough;dsfhgn</span>
-                  </p>
-                </div>
-              </Fade>
+
+              <div className="text-container">
+                <Fade bottom cascade collapse when={this.state.show}>
+                  <article className="rules-text-col1">
+                    <h2 className="rules-header">Rules</h2>
+                    <p>
+                      <span>
+                        Player 1 is given a word, that they try to draw.
+                      </span>
+                      <span>
+                        Player 2 then guesses what the drawing represents.
+                      </span>
+                    </p>
+                  </article>
+                </Fade>
+              </div>
+
+              <div className="text-container">
+                <Fade bottom cascade collapse when={this.state.show}>
+                  <article className="rules-text-col2">
+                    <p>
+                      <span>
+                        Player 3 tries to draw previous player's guess.
+                      </span>
+                      <span>
+                        Player 4 has to guess what previous player's drawing
+                        represents.
+                      </span>
+                    </p>
+                  </article>
+                </Fade>
+              </div>
             </div>
           </div>
         </div>
