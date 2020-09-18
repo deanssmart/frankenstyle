@@ -53,11 +53,12 @@
 
 .button-guess {
   align-self: center;
-  margin-top: 0rem;
-  margin: 0rem 0.5rem 0.5rem 0rem;
+  margin-top: 1.5rem;
+  /* margin: 0rem 0.5rem 0.5rem 0rem;
   width: 5rem;
   height: 5rem;
   margin: 2rem;
+
 }
 
 .button-sketchpad {
@@ -70,5 +71,5 @@
 }
 
 .button-newgame {
-  margin-top: 5rem;
+  margin-top: 8rem;
 }

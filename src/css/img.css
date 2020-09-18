@@ -9,3 +9,7 @@
 .img-card-round-background {
   background-color: white;
 }
+
+.img-card-endscreen {
+  border-radius: 1.85rem 1.85rem 1.85rem 1.85rem;
+}
