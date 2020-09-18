@@ -46,7 +46,7 @@ h2 {
 }
 
 
-.title {
+/*.title {
   font-size: 4rem;
   color: white;
   /* background-size: 120% 100%;
@@ -61,7 +61,7 @@ h2 {
   /* background-image: linear-gradient(45deg,
    #f0f0ed,  #f0f0ed); */
   /* animation: 0.8s shake infinite alternate; */
-}
+/* } */
 
 /* @keyframes shake {
   0% { transform: skewX(-15deg); }
@@ -72,9 +72,7 @@ h2 {
   100% { transform: skewX(0deg); }  
 } */
 
-@media only screen and (max-width: 635px) {
-  /* For mobile phones: */
-    .title {
-      font-size: 9vw;
-  }
+
+h1.start-title {
+  margin: 0.5rem 0rem 0.5rem 0rem;
 }

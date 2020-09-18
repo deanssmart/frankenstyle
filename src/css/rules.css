@@ -1,0 +1,7 @@
+.rules-text {
+  grid-row: 1;
+  grid-column: 1;
+  text-align: center;
+  justify-self: center;
+  align-self: end;
+}

@@ -1,13 +1,49 @@
 .button {
   border-radius: 50%;
-  background-color: var(--secondary-colour);
+  border: 0.5rem var(--secondary-colour) solid;
   font-size: large;
-  color: white;
-  border: var(--highlights) 2px;
   text-align: center;
+  background: transparent;
+  color: white;
   height: 8rem;
   width: 8rem;
   margin: 2rem;
+  cursor: pointer;
+  box-shadow: 0 5px 13, 5, 83;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.buttons-startgame {
+  border-radius: 50%;
+  border: 0.5rem var(--secondary-colour) solid;
+  font-size: large;
+  text-align: center;
+  background: transparent;
+  color: white;
+  height: 8rem;
+  width: 8rem;
+  cursor: pointer;
+  box-shadow: 0 5px 13, 5, 83;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--secondary-colour);
+}
+
+.button:active {
+  box-shadow: 0 3px rgb(13, 5, 83);
+  transform: translateY(8px);
+}
+
+.buttons-startgame:hover {
+  background-color: var(--secondary-colour);
+}
+.buttons-startgame:active {
+  box-shadow: 0 3px rgb(13, 5, 83);
+  transform: translateY(8px);
 }
 
 .gamestart-button {
@@ -17,14 +53,19 @@
 
 .button-guess {
   align-self: center;
+  margin-top: 0rem;
+  margin: 0rem 0.5rem 0.5rem 0rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .button-sketchpad {
-  align-self: center;  
+  align-self: center;
 }
 
 .buttons-colour-pick {
-  align-self: stretch;  
+  align-self: stretch;
+  justify-self: center;
 }
 
 .button-newgame {
