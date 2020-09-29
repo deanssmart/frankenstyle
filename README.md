@@ -20,28 +20,23 @@ Interactive four player Pictionary style game where players take it in turns to 
 - Git (version managed)
 - Laravel (Backend)
 
-<!-- ### Functionality and Features
+### Functionality and Features
 
 - User input player names
-- Player number validation
-- Random pairing generator
-- Play multiple rounds
-- Smart round names
-- Ability to reset
-- Awesome sound effects and theme song 👍
-- Option to turn off theme song 👎
-- A nod to Tron and the 80's 🕹️
+- Drawing canvas with mouse or touch input
+- backend database of played games (future feature to have a history table)
+- Fun for all the family 👍
 
-### How to Use
+### How to Play
 
-- Enter a player name and click 'ADD'
-- Keep doing this until you have the desired number of players (needs to be a power of 2 i.e 2, 4, 8, 16... etc)
-- Click 'START TOURNAMENT'
-- You can click 'NEW TOURNAMENT' at any point to reset the app
-- For each game click the 'WON' button for the winning player
-- Once all games are complete click 'NEXT ROUND'
-- Continue until the final round where the tournament master is decided
-- Click the 'TOURNAMENT MASTER' button and revel in the glory if it was you that won 🏆
+- Enter player names and click 'Start'
+- Player 1 is given a word, and an image for reference
+- When they are ready they click the 'Ready' button
+- On the sketch pad they attempt to draw the word they were given and when they are finished they click 'Submit'
+- Player 2 then guesses what the drawing that player 1 just drew, represents, by typing in the input form and clicking 'Submit'.
+- Player 3 then tries to draw the word that player 2 just guessed.
+- Finally player 4 has to guess what player 3 has just drawn
+- After player 4 submits their guess the original word, image and all the player drawings and guesses are presented for everyone to see.
 
 ## Setup on your machine
 
@@ -51,12 +46,12 @@ Interactive four player Pictionary style game where players take it in turns to 
 ```shell 
 $ cd ~/your-directory-name-here
 ```
-3. Copy the SSH key from this GitHub repository `git@github.com:deanssmart/TOURN.git`
+3. Copy the SSH key from this GitHub repository `git@github.com:deanssmart/frankenstyle.git`
 
 4. Run the following code in your command line to clone the repo to your machine (you can change the app-name to what you desire):  
 
 ```shell 
-git clone git@github.com:deanssmart/TOURN.git <app-name>
+git clone git@github.com:deanssmart/frankenstyle.git <app-name>
 ```
 5. Navigate to your new app directory (the app name you just picked):
 
@@ -77,12 +72,9 @@ npm start
 
 ## Credits
 
-### Sounds
+### Backend
 
-- Effects from Zapsplat.com
-- Music 'Searching For You' by WhiteHex from from YouTube Audio Library
+- Marta Kobylinska https://github.com/mmkobylin
 
 ### CSS 
-- Adapted buttons from CodePen Home Alex Bodin https://codepen.io/Alexb98/pen/XWrqpxB 
-- Adapted lasers from Evolution codepen https://codepen.io/Evolution/pen/auLlw
-- Adapted tron style grid from CodePen Joah Gerstenberg https://codepen.io/JoahG/pen/QJQdJB -->
+- Oliver Ballon https://github.com/OlBal
